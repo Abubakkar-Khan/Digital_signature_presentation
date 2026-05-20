@@ -7,23 +7,23 @@ export default function Navbar({ currentSlide, goToSlide, total = 27 }) {
 
   const navItems = [
     { label: "Intro",      categoryId: "intro",      slideIndex: 1  },
-    { label: "Hamza",      categoryId: "story",      slideIndex: 2  },
+    { label: "Hamza",      categoryId: "story",      slideIndex: 3  },
     { label: "Existence",  categoryId: "existence",  slideIndex: 8  },
-    { label: "Process",    categoryId: "process",    slideIndex: 9  },
-    { label: "Hash",       categoryId: "hash",       slideIndex: 10 },
-    { label: "2^256",      categoryId: "scale",      slideIndex: 13 },
-    { label: "Encryption", categoryId: "encryption", slideIndex: 21 },
-    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 26 },
+    { label: "Process",    categoryId: "process",    slideIndex: 10 },
+    { label: "Hash",       categoryId: "hash",       slideIndex: 11 },
+    { label: "2^256",      categoryId: "scale",      slideIndex: 14 },
+    { label: "Encryption", categoryId: "encryption", slideIndex: 22 },
+    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 27 },
   ];
 
   const getActiveCategory = () => {
-    if (currentSlide === 1)                              return "intro";
-    if (currentSlide >= 2  && currentSlide <= 6)        return "story";
-    if (currentSlide >= 7  && currentSlide <= 8)        return "existence";
-    if (currentSlide === 9)                             return "process";
-    if (currentSlide >= 10 && currentSlide <= 12)       return "hash";
-    if (currentSlide >= 13 && currentSlide <= 20)       return "scale";
-    if (currentSlide >= 21 && currentSlide <= 25)       return "encryption";
+    if (currentSlide >= 1  && currentSlide <= 2)        return "intro";
+    if (currentSlide >= 3  && currentSlide <= 7)        return "story";
+    if (currentSlide >= 8  && currentSlide <= 9)        return "existence";
+    if (currentSlide === 10)                            return "process";
+    if (currentSlide >= 11 && currentSlide <= 13)       return "hash";
+    if (currentSlide >= 14 && currentSlide <= 21)       return "scale";
+    if (currentSlide >= 22 && currentSlide <= 26)       return "encryption";
     return "blueprint";
   };
 

@@ -1,8 +1,9 @@
 "use client";
 
 import { Star } from "lucide-react";
+import KeyspaceZoomSimulator from "../KeyspaceZoomSimulator";
 
-export default function Section8Huge4({ onNext }) {
+export default function Section8Huge4({ onNext, goToSlide }) {
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
       {/* Slide Header */}
@@ -12,7 +13,7 @@ export default function Section8Huge4({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 4 - THE GALACTIC LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 16 / 27
+          SLIDE 17 / 28
         </span>
       </div>
 
@@ -43,23 +44,9 @@ export default function Section8Huge4({ onNext }) {
           </div>
         </div>
 
-        {/* Visual Graphic - Galaxy Stars Image */}
-        <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[220px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">MILKY WAY ORBIT DATA</span>
-
-            <div className="relative w-full h-[140px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center">
-              <img
-                src="/galaxy_stars.png"
-                alt="Galaxy Stars"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <span className="text-[9px] font-mono text-gray-400 italic">
-              "4 Billion Earths orbiting stars in the Milky Way..."
-            </span>
-          </div>
+        {/* Visual Graphic - Interactive Cosmic Zoom */}
+        <div className="col-span-1 md:col-span-6 h-full flex flex-col justify-center">
+          <KeyspaceZoomSimulator level={4} onLevelChange={(lvl) => goToSlide(lvl + 13)} />
         </div>
       </div>
 

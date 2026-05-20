@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 
 // Slides
 import Section1Hero from "@/components/Sections/Section1Hero";
+import Section2WhatIsSignature from "@/components/Sections/Section2WhatIsSignature";
 import Section3Hamza1 from "@/components/Sections/Section3Hamza1";
 import Section3Hamza2 from "@/components/Sections/Section3Hamza2";
 import Section3Hamza3 from "@/components/Sections/Section3Hamza3";
@@ -43,14 +44,20 @@ import Section13DocDroc from "@/components/Sections/Section13DocDroc";
 import Section14Closing from "@/components/Sections/Section14Closing";
 
 export default function Home() {
-  const TOTAL = 27;
+  const TOTAL = 28;
   const [currentSlide, setCurrentSlide] = useState(1);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // If focused on an input or textarea, let the default behavior happen
-      const activeTag = document.activeElement?.tagName;
-      if (activeTag === "INPUT" || activeTag === "TEXTAREA" || document.activeElement?.isContentEditable) {
+      // Only block navigation if focused on actual text entry fields
+      const activeElement = document.activeElement;
+      const isTextInput = activeElement && (
+        activeElement.tagName === "TEXTAREA" ||
+        (activeElement.tagName === "INPUT" && 
+         ["text", "email", "password", "number", "search", "tel", "url"].includes(activeElement.type)) ||
+        activeElement.isContentEditable
+      );
+      if (isTextInput) {
         return;
       }
       if (e.key === "ArrowRight") {
@@ -72,43 +79,44 @@ export default function Home() {
   const renderSlide = () => {
     switch (currentSlide) {
       // ── Intro + Story ──────────────────────────────────────────────
-      case  1: return <Section1Hero        onNext={next} />;
-      case  2: return <Section3Hamza1      onNext={next} />;
-      case  3: return <Section3Hamza2      onNext={next} />;
-      case  4: return <Section3Hamza3      onNext={next} />;
-      case  5: return <Section3Hamza4      onNext={next} />;
-      case  6: return <Section3Hamza5      onNext={next} />;
-      case  7: return <Section4Problems    onNext={next} />;
-      case  8: return <Section5Pillars     onNext={next} />;
+      case  1: return <Section1Hero              onNext={next} />;
+      case  2: return <Section2WhatIsSignature   onNext={next} />;
+      case  3: return <Section3Hamza1            onNext={next} />;
+      case  4: return <Section3Hamza2            onNext={next} />;
+      case  5: return <Section3Hamza3            onNext={next} />;
+      case  6: return <Section3Hamza4            onNext={next} />;
+      case  7: return <Section3Hamza5            onNext={next} />;
+      case  8: return <Section4Problems          onNext={next} />;
+      case  9: return <Section5Pillars           onNext={next} />;
 
       // ── Digital Signature Process (animated) ──────────────────────
-      case  9: return <SectionProcessAnimated onNext={next} />;
+      case 10: return <SectionProcessAnimated    onNext={next} />;
 
       // ── Hashing ───────────────────────────────────────────────────
-      case 10: return <SectionHashTitle    onNext={next} />;
-      case 11: return <SectionHashDefinition onNext={next} />;
-      case 12: return <Section6HashExplain onNext={next} />;
+      case 11: return <SectionHashTitle          onNext={next} />;
+      case 12: return <SectionHashDefinition     onNext={next} />;
+      case 13: return <Section6HashExplain       onNext={next} />;
 
-      // ── 2^256 Scale ───────────────────────────────────────────────
-      case 13: return <Section8Huge1       onNext={next} />;
-      case 14: return <Section8Huge2       onNext={next} />;
-      case 15: return <Section8Huge3       onNext={next} />;
-      case 16: return <Section8Huge4       onNext={next} />;
-      case 17: return <Section8Huge5       onNext={next} />;
-      case 18: return <Section8Huge6       onNext={next} />;
-      case 19: return <Section8Huge7       onNext={next} />;
-      case 20: return <Section8Huge8       onNext={next} />;
+      // ── 2^256 Scale (Interactive Zoom Simulator) ──────────────────
+      case 14: return <Section8Huge1             onNext={next} goToSlide={setCurrentSlide} />;
+      case 15: return <Section8Huge2             onNext={next} goToSlide={setCurrentSlide} />;
+      case 16: return <Section8Huge3             onNext={next} goToSlide={setCurrentSlide} />;
+      case 17: return <Section8Huge4             onNext={next} goToSlide={setCurrentSlide} />;
+      case 18: return <Section8Huge5             onNext={next} goToSlide={setCurrentSlide} />;
+      case 19: return <Section8Huge6             onNext={next} goToSlide={setCurrentSlide} />;
+      case 20: return <Section8Huge7             onNext={next} goToSlide={setCurrentSlide} />;
+      case 21: return <Section8Huge8             onNext={next} goToSlide={setCurrentSlide} />;
 
       // ── Encryption ────────────────────────────────────────────────
-      case 21: return <SectionEncryptionTitle      onNext={next} />;
-      case 22: return <SectionEncryptionDefinition onNext={next} />;
-      case 23: return <Section9History             onNext={next} />;
-      case 24: return <Section10Modern             onNext={next} />;
+      case 22: return <SectionEncryptionTitle      onNext={next} />;
+      case 23: return <SectionEncryptionDefinition onNext={next} />;
+      case 24: return <Section9History             onNext={next} />;
+      case 25: return <Section10Modern             onNext={next} />;
 
       // ── Endgame ───────────────────────────────────────────────────
-      case 25: return <Section13NonRepudiation onNext={next} />;
-      case 26: return <Section13DocDroc        onNext={next} />;
-      case 27: return <Section14Closing        onRestart={restart} />;
+      case 26: return <Section13NonRepudiation     onNext={next} />;
+      case 27: return <Section13DocDroc            onNext={next} />;
+      case 28: return <Section14Closing            onRestart={restart} />;
 
       default: return <Section1Hero onNext={next} />;
     }

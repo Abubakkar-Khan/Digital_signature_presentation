@@ -1,8 +1,9 @@
 "use client";
 
 import { Star } from "lucide-react";
+import KeyspaceZoomSimulator from "../KeyspaceZoomSimulator";
 
-export default function Section8Huge5({ onNext }) {
+export default function Section8Huge5({ onNext, goToSlide }) {
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
       {/* Slide Header */}
@@ -12,7 +13,7 @@ export default function Section8Huge5({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 5 - THE UNIVERSE LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 17 / 27
+          SLIDE 18 / 28
         </span>
       </div>
 
@@ -43,27 +44,9 @@ export default function Section8Huge5({ onNext }) {
           </div>
         </div>
 
-        {/* Visual Graphic */}
-        <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#007AFF] text-center min-h-[220px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">COSMIC NETWORK GRID</span>
-
-            <div className="w-full p-4 border-2 border-black bg-black rounded-lg text-center">
-              <pre className="text-[9px] text-[#007AFF] font-mono leading-none whitespace-pre bg-transparent border-0 p-0 m-0 w-full">
-                {`   🌀 🌀 🌀 🌀
-   🌀 🌀 🌀 🌀
-   🌀 🌀 🌀 🌀
-  [ 4B Galaxies ]`}
-              </pre>
-              <div className="text-[10px] font-mono text-gray-300 mt-2">
-                <strong>Giga Galactic Supercomputer Grid</strong>
-              </div>
-            </div>
-
-            <span className="text-[9px] font-mono text-gray-400 italic">
-              "Computing 2^160 guesses per second in parallel..."
-            </span>
-          </div>
+        {/* Visual Graphic - Interactive Cosmic Zoom */}
+        <div className="col-span-1 md:col-span-6 h-full flex flex-col justify-center">
+          <KeyspaceZoomSimulator level={5} onLevelChange={(lvl) => goToSlide(lvl + 13)} />
         </div>
       </div>
 
