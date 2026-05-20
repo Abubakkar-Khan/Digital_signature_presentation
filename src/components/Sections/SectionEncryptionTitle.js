@@ -12,7 +12,7 @@ export default function SectionEncryptionTitle({ onNext }) {
           <span>[ CHAPTER 19: TITLE CARD ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 19 / 26
+          SLIDE 22 / 27
         </span>
       </div>
 

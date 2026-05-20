@@ -2,69 +2,69 @@
 
 import { ShieldCheck } from "lucide-react";
 
-export default function Navbar({ currentSlide, goToSlide }) {
-  const scrollProgress = (currentSlide / 26) * 100;
+export default function Navbar({ currentSlide, goToSlide, total = 27 }) {
+  const scrollProgress = (currentSlide / total) * 100;
 
-  // Define categories and their starting slide index (1-indexed)
   const navItems = [
-    { label: "Intro", categoryId: "intro", slideIndex: 1 },
-    { label: "Hamza Story", categoryId: "story", slideIndex: 2 },
-    { label: "Existence", categoryId: "existence", slideIndex: 8 },
-    { label: "Hash", categoryId: "hash", slideIndex: 9 },
-    { label: "2^256 Scale", categoryId: "scale", slideIndex: 11 },
-    { label: "Encryption", categoryId: "encryption", slideIndex: 19 },
-    { label: "Blueprint", categoryId: "blueprint", slideIndex: 24 },
-    { label: "Live Code", categoryId: "code", slideIndex: 25 },
+    { label: "Intro",      categoryId: "intro",      slideIndex: 1  },
+    { label: "Hamza",      categoryId: "story",      slideIndex: 2  },
+    { label: "Existence",  categoryId: "existence",  slideIndex: 8  },
+    { label: "Process",    categoryId: "process",    slideIndex: 9  },
+    { label: "Hash",       categoryId: "hash",       slideIndex: 10 },
+    { label: "2^256",      categoryId: "scale",      slideIndex: 13 },
+    { label: "Encryption", categoryId: "encryption", slideIndex: 21 },
+    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 26 },
   ];
 
-  // Helper to find which category is active based on currentSlide index
   const getActiveCategory = () => {
-    if (currentSlide === 1) return "intro";
-    if (currentSlide >= 2 && currentSlide <= 6) return "story";
-    if (currentSlide === 7 || currentSlide === 8) return "existence";
-    if (currentSlide === 9 || currentSlide === 10) return "hash";
-    if (currentSlide >= 11 && currentSlide <= 18) return "scale";
-    if (currentSlide >= 19 && currentSlide <= 23) return "encryption";
-    if (currentSlide === 24) return "blueprint";
-    return "code";
+    if (currentSlide === 1)                              return "intro";
+    if (currentSlide >= 2  && currentSlide <= 6)        return "story";
+    if (currentSlide >= 7  && currentSlide <= 8)        return "existence";
+    if (currentSlide === 9)                             return "process";
+    if (currentSlide >= 10 && currentSlide <= 12)       return "hash";
+    if (currentSlide >= 13 && currentSlide <= 20)       return "scale";
+    if (currentSlide >= 21 && currentSlide <= 25)       return "encryption";
+    return "blueprint";
   };
 
-  const activeCategory = getActiveCategory();
+  const active = getActiveCategory();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#0E0F12] border-b-3 border-black">
-      {/* Swiss Solid Progress Bar */}
-      <div className="w-full h-[4px] bg-[#1F202B]">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#0E0F12] border-b-2 border-black">
+      {/* Progress bar */}
+      <div className="w-full h-[3px] bg-[#1F202B]">
         <div
           className="h-full bg-[var(--swiss-red)] transition-all duration-300 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
-      {/* Main Navbar Row */}
-      <nav className="mx-auto w-full px-6 py-4 flex items-center justify-between">
-        {/* Brand Logo - Swiss Minimal */}
-        <div 
+      <nav className="w-full px-6 py-3 flex items-center justify-between">
+        {/* Brand */}
+        <div
           onClick={() => goToSlide(1)}
-          className="flex items-center gap-2 cursor-pointer group"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <div className="p-1 border-2 border-black bg-black text-[var(--swiss-red)]">
             <ShieldCheck className="w-4 h-4" />
           </div>
-          <span className="font-space font-black tracking-tighter text-xs md:text-sm text-white uppercase">
-            DIGITAL_SIGNATURES <span className="text-[9px] font-mono text-[var(--swiss-yellow)] lowercase font-normal ml-1">v3.0</span>
+          <span className="font-space font-black tracking-tighter text-xs text-white uppercase">
+            DIGITAL_SIGNATURES{" "}
+            <span className="text-[9px] font-mono text-[var(--swiss-yellow)] lowercase font-normal ml-1">
+              v4.0
+            </span>
           </span>
         </div>
 
-        {/* Categories List */}
-        <div className="hidden lg:flex items-center gap-2">
+        {/* Nav categories */}
+        <div className="hidden lg:flex items-center gap-1.5">
           {navItems.map((item) => {
-            const isActive = activeCategory === item.categoryId;
+            const isActive = active === item.categoryId;
             return (
               <button
                 key={item.categoryId}
                 onClick={() => goToSlide(item.slideIndex)}
-                className={`px-3 py-1 text-[10px] font-mono font-black uppercase transition-all duration-100 border-2 border-black rounded ${
+                className={`px-3 py-1 text-[10px] font-mono font-black uppercase border-2 border-black rounded cursor-pointer transition-all ${
                   isActive
                     ? "bg-black text-[var(--swiss-red)] shadow-[2px_2px_0px_#000]"
                     : "bg-[#181922] text-gray-400 hover:text-white"
@@ -76,11 +76,9 @@ export default function Navbar({ currentSlide, goToSlide }) {
           })}
         </div>
 
-        {/* Slide Counter Indicator */}
-        <div className="flex items-center gap-3">
-          <div className="px-2.5 py-1 border-2 border-black bg-black text-[9px] text-[var(--swiss-yellow)] font-mono uppercase tracking-widest">
-            SLIDE {currentSlide.toString().padStart(2, "0")} / 26
-          </div>
+        {/* Slide counter */}
+        <div className="px-2.5 py-1 border-2 border-black bg-black text-[9px] text-[var(--swiss-yellow)] font-mono uppercase tracking-widest">
+          SLIDE {String(currentSlide).padStart(2, "0")} / {total}
         </div>
       </nav>
     </header>

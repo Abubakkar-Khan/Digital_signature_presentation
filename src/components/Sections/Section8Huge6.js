@@ -12,7 +12,7 @@ export default function Section8Huge6({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 6 - TIME MULTIPLIER 1 ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 16 / 26
+          SLIDE 18 / 27
         </span>
       </div>
 

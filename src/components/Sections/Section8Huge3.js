@@ -12,7 +12,7 @@ export default function Section8Huge3({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 3 - THE PLANETARY LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 13 / 26
+          SLIDE 15 / 27
         </span>
       </div>
 

@@ -12,7 +12,7 @@ export default function Section13NonRepudiation({ onNext }) {
           <span>[ CHAPTER 12: CRYPTOGRAPHIC NON-REPUDIATION IN ACTION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 23 / 26
+          SLIDE 25 / 27
         </span>
       </div>
 

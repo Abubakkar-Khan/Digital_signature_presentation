@@ -12,7 +12,7 @@ export default function SectionHashTitle({ onNext }) {
           <span>[ CHAPTER 09: TITLE CARD ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 09 / 26
+          SLIDE 10 / 27
         </span>
       </div>
 
