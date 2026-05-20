@@ -1,65 +1,108 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import Navbar from "@/components/Navbar";
+
+// Section Chapter Imports
+import Section1Hero from "@/components/Sections/Section1Hero";
+import Section2Signature from "@/components/Sections/Section2Signature";
+import Section3AlexStory from "@/components/Sections/Section3AlexStory";
+import Section4Problems from "@/components/Sections/Section4Problems";
+import Section5Pillars from "@/components/Sections/Section5Pillars";
+import Section5IntroDigital from "@/components/Sections/Section5IntroDigital";
+import Section6HashExplain from "@/components/Sections/Section6HashExplain";
+import Section8HugeNumbers from "@/components/Sections/Section8HugeNumbers";
+import Section7ShaDeep from "@/components/Sections/Section7ShaDeep";
+import Section9History from "@/components/Sections/Section9History";
+import Section10Modern from "@/components/Sections/Section10Modern";
+import Section11Process from "@/components/Sections/Section11Process";
+import Section13NonRepudiation from "@/components/Sections/Section13NonRepudiation";
+import Section13DocDroc from "@/components/Sections/Section13DocDroc";
+import Section12Future from "@/components/Sections/Section12Future";
+import Section14Closing from "@/components/Sections/Section14Closing";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        setCurrentSlide((prev) => Math.min(prev + 1, 16));
+      } else if (e.key === "ArrowLeft") {
+        setCurrentSlide((prev) => Math.max(prev - 1, 1));
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => Math.min(prev + 1, 16));
+  };
+
+  const restartDeck = () => {
+    setCurrentSlide(1);
+  };
+
+  // Render active slide
+  const renderSlide = () => {
+    switch (currentSlide) {
+      case 1:
+        return <Section1Hero onNext={nextSlide} />;
+      case 2:
+        return <Section2Signature onNext={nextSlide} />;
+      case 3:
+        return <Section3AlexStory onNext={nextSlide} />;
+      case 4:
+        return <Section4Problems onNext={nextSlide} />;
+      case 5:
+        return <Section5Pillars onNext={nextSlide} />;
+      case 6:
+        return <Section5IntroDigital onNext={nextSlide} />;
+      case 7:
+        return <Section6HashExplain onNext={nextSlide} />;
+      case 8:
+        return <Section8HugeNumbers onNext={nextSlide} />;
+      case 9:
+        return <Section7ShaDeep onNext={nextSlide} />;
+      case 10:
+        return <Section9History onNext={nextSlide} />;
+      case 11:
+        return <Section10Modern onNext={nextSlide} />;
+      case 12:
+        return <Section11Process onNext={nextSlide} />;
+      case 13:
+        return <Section13NonRepudiation onNext={nextSlide} />;
+      case 14:
+        return <Section13DocDroc onNext={nextSlide} />;
+      case 15:
+        return <Section12Future onNext={nextSlide} />;
+      case 16:
+        return <Section14Closing onRestart={restartDeck} />;
+      default:
+        return <Section1Hero onNext={nextSlide} />;
+    }
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="relative w-screen h-screen overflow-hidden bg-[#0E0F12] text-[#F1F2F6] flex flex-col justify-between pt-16">
+      {/* Floating Head Navbar */}
+      <Navbar currentSlide={currentSlide} goToSlide={setCurrentSlide} />
+
+      {/* Main Slide Deck Presenter Container */}
+      <div className="flex-1 w-full max-w-7xl mx-auto p-4 md:p-6 overflow-hidden flex flex-col justify-center">
+        <div className="w-full h-full max-h-[640px] border-3 border-black bg-[#13141C] rounded-lg shadow-[8px_8px_0px_#000] relative overflow-y-auto">
+          {renderSlide()}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+      
+      {/* Visual Keyboard navigation helper footer */}
+      <div className="w-full text-center pb-2 bg-[#0E0F12] text-[9px] font-mono text-gray-500 flex justify-center gap-4">
+        <span>⌨️ [ Use Left / Right Arrow keys to navigate slides ]</span>
+        <span>•</span>
+        <span>🖥️ [ Designed for desktop presentation viewports ]</span>
+      </div>
+    </main>
   );
 }

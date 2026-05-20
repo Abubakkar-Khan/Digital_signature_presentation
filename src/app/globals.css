@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
+@theme {
+  --font-space: var(--font-space-grotesk), sans-serif;
+  --font-orbitron: var(--font-orbitron), monospace;
+  --font-inter: var(--font-inter), sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0E0F12;
+  --foreground: #F1F2F6;
+  
+  /* Vibrant Swiss Accents */
+  --swiss-red: #FF3B30;
+  --swiss-yellow: #FFCC00;
+  --swiss-blue: #007AFF;
+  --swiss-green: #34C759;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space), var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* Swiss Grid Base */
+.swiss-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Hand-Drawn Doodle Border styling */
+.doodle-card {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 5px 5px 0px 0px #000000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.doodle-card-red {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 5px 5px 0px 0px var(--swiss-red);
+}
+
+.doodle-card-yellow {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+  box-shadow: 5px 5px 0px 0px var(--swiss-yellow);
+}
+
+.doodle-card-blue {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+  box-shadow: 5px 5px 0px 0px var(--swiss-blue);
+}
+
+.doodle-card-green {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  box-shadow: 5px 5px 0px 0px var(--swiss-green);
+}
+
+/* Doodle Buttons */
+.doodle-btn {
+  background: #181922;
+  border: 3px solid #000000;
+  border-radius: 120px 15px 100px 15px / 15px 95px 15px 105px;
+  box-shadow: 4px 4px 0px 0px #000000;
+  font-family: var(--font-space);
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.doodle-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
+}
+
+.doodle-btn-red {
+  background: var(--swiss-red);
+  color: #ffffff;
+}
+
+.doodle-btn-yellow {
+  background: var(--swiss-yellow);
+  color: #000000;
+}
+
+.doodle-btn-blue {
+  background: var(--swiss-blue);
+  color: #ffffff;
+}
+
+.doodle-btn-green {
+  background: var(--swiss-green);
+  color: #000000;
+}
+
+/* Swiss typography tags */
+.swiss-badge {
+  font-family: var(--font-orbitron);
+  font-weight: 900;
+  border: 2px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.grid-cols-16 {
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
+/* Doodly lines */
+.sketchy-line {
+  border-top: 3px dashed #000000;
+}
+
+/* Hide scrollbars for presentation viewer */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0f12;
+}
+::-webkit-scrollbar-thumb {
+  background: #282a36;
+  border: 2px solid #0e0f12;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--swiss-red);
 }
