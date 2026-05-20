@@ -51,7 +51,7 @@ export default function Section9History({ onNext }) {
           <span>[ CHAPTER 08: ANCIENT HISTORY CIPHERS ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 10 / 16
+          SLIDE 18 / 24
         </span>
       </div>
 

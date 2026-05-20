@@ -12,7 +12,7 @@ export default function Section13DocDroc({ onNext }) {
           <span>[ CHAPTER 12: DOCDROC SYSTEM ARCHITECTURE BLUEPRINT ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 14 / 16
+          SLIDE 22 / 24
         </span>
       </div>
 
@@ -95,13 +95,13 @@ export default function Section13DocDroc({ onNext }) {
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          Architecture overview logged. Tap next to review future security visions.
+          Architecture overview logged. Tap next to run the live code verification simulation.
         </span>
         <button
           onClick={onNext}
-          className="px-6 py-3 doodle-btn doodle-btn-magenta text-[10px] font-black uppercase border-2 border-black cursor-pointer"
+          className="px-6 py-2.5 doodle-btn doodle-btn-magenta text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          Wrap Up Deck
+          Run Code Simulator
         </button>
       </div>
     </div>

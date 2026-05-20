@@ -3,30 +3,30 @@
 import { ShieldCheck } from "lucide-react";
 
 export default function Navbar({ currentSlide, goToSlide }) {
-  const scrollProgress = (currentSlide / 16) * 100;
+  const scrollProgress = (currentSlide / 24) * 100;
 
   // Define categories and their starting slide index (1-indexed)
   const navItems = [
     { label: "Intro", categoryId: "intro", slideIndex: 1 },
-    { label: "Scribbles", categoryId: "signatures", slideIndex: 2 },
-    { label: "Pillars", categoryId: "pillars", slideIndex: 5 },
-    { label: "Hashing", categoryId: "hashing", slideIndex: 7 },
-    { label: "Eras", categoryId: "encryption", slideIndex: 10 },
-    { label: "Process", categoryId: "process", slideIndex: 12 },
-    { label: "Court", categoryId: "court", slideIndex: 13 },
-    { label: "Demo", categoryId: "demo", slideIndex: 14 },
+    { label: "Hamza Story", categoryId: "story", slideIndex: 2 },
+    { label: "Existence", categoryId: "existence", slideIndex: 8 },
+    { label: "Live Hash", categoryId: "hash", slideIndex: 9 },
+    { label: "2^256 Scale", categoryId: "scale", slideIndex: 10 },
+    { label: "Encryption", categoryId: "encryption", slideIndex: 19 },
+    { label: "Blueprint", categoryId: "blueprint", slideIndex: 22 },
+    { label: "Live Code", categoryId: "code", slideIndex: 23 },
   ];
 
   // Helper to find which category is active based on currentSlide index
   const getActiveCategory = () => {
     if (currentSlide === 1) return "intro";
-    if (currentSlide >= 2 && currentSlide <= 4) return "signatures";
-    if (currentSlide >= 5 && currentSlide <= 6) return "pillars";
-    if (currentSlide >= 7 && currentSlide <= 9) return "hashing";
-    if (currentSlide >= 10 && currentSlide <= 11) return "encryption";
-    if (currentSlide === 12) return "process";
-    if (currentSlide === 13) return "court";
-    return "demo";
+    if (currentSlide >= 2 && currentSlide <= 6) return "story";
+    if (currentSlide === 7 || currentSlide === 8) return "existence";
+    if (currentSlide === 9) return "hash";
+    if (currentSlide >= 10 && currentSlide <= 17) return "scale";
+    if (currentSlide >= 18 && currentSlide <= 21) return "encryption";
+    if (currentSlide === 22) return "blueprint";
+    return "code";
   };
 
   const activeCategory = getActiveCategory();
@@ -52,12 +52,12 @@ export default function Navbar({ currentSlide, goToSlide }) {
             <ShieldCheck className="w-4 h-4" />
           </div>
           <span className="font-space font-black tracking-tighter text-xs md:text-sm text-white uppercase">
-            CRYPTO-DECK <span className="text-[9px] font-mono text-[var(--swiss-yellow)] lowercase font-normal ml-1">v2.0</span>
+            DIGITAL_SIGNATURES <span className="text-[9px] font-mono text-[var(--swiss-yellow)] lowercase font-normal ml-1">v3.0</span>
           </span>
         </div>
 
         {/* Categories List */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           {navItems.map((item) => {
             const isActive = activeCategory === item.categoryId;
             return (
@@ -79,7 +79,7 @@ export default function Navbar({ currentSlide, goToSlide }) {
         {/* Slide Counter Indicator */}
         <div className="flex items-center gap-3">
           <div className="px-2.5 py-1 border-2 border-black bg-black text-[9px] text-[var(--swiss-yellow)] font-mono uppercase tracking-widest">
-            SLIDE {currentSlide.toString().padStart(2, "0")} / 16
+            SLIDE {currentSlide.toString().padStart(2, "0")} / 24
           </div>
         </div>
       </nav>

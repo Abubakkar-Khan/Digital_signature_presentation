@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, CheckCircle, FileText, UserCheck } from "lucide-react";
+import { Shield } from "lucide-react";
 
 export default function Section5Pillars({ onNext }) {
   const pillars = [
@@ -36,10 +36,10 @@ export default function Section5Pillars({ onNext }) {
       <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
         <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
           <Shield className="w-4 h-4 text-[var(--swiss-red)]" />
-          <span>[ CHAPTER 04: THE THREE PILLARS OF CYBERSECURITY ]</span>
+          <span>[ CHAPTER 08: DIGITAL SIGNATURE EXISTENCE ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 05 / 16
+          SLIDE 08 / 24
         </span>
       </div>
 
@@ -47,13 +47,13 @@ export default function Section5Pillars({ onNext }) {
       <div className="flex-1 flex flex-col justify-center my-auto overflow-hidden">
         <div className="text-center mb-4">
           <h2 className="text-2xl md:text-4xl font-space font-black uppercase text-white leading-none">
-            Why Cryptography{" "}
+            Digital Signature{" "}
             <span className="px-2 py-0.5 bg-[var(--swiss-red)] text-white border-2 border-black inline-block transform rotate-1 shadow-[2px_2px_0px_#000] rounded">
-              Exists
+              Existence
             </span>
           </h2>
           <p className="text-[10px] font-mono text-gray-400 mt-1.5">
-            Traditional files can be modified by anyone. Cybersecurity signatures rely on three mathematically absolute foundations.
+            Traditional signature files can be modified by anyone. Cybersecurity signatures exist based on three mathematically absolute foundations.
           </p>
         </div>
 

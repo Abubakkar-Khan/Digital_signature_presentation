@@ -49,7 +49,7 @@ export default function Section11Process({ onNext }) {
           <span>[ CHAPTER 10: THE CRYPTOGRAPHIC PIPELINE WORKFLOW ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 12 / 16
+          SLIDE 20 / 24
         </span>
       </div>
 
@@ -105,16 +105,15 @@ export default function Section11Process({ onNext }) {
         </div>
       </div>
 
-      {/* Footer bar */}
-      <div className="flex justify-between items-center border-t-[3px] border-black pt-4">
-        <span className="text-xs font-mono text-gray-500">
-          Flowchart active. Tap next to review Future signature horizons.
+      <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
+        <span className="text-[10px] font-mono text-gray-500">
+          Flowchart active. Tap next to review Court Non-Repudiation standards.
         </span>
         <button
           onClick={onNext}
-          className="px-6 py-3 doodle-btn doodle-btn-blue text-xs font-black uppercase tracking-wider text-white border-2 border-black cursor-pointer"
+          className="px-6 py-2.5 doodle-btn doodle-btn-blue text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          See Future Tech
+          Court Non-Repudiation
         </button>
       </div>
     </div>

@@ -45,7 +45,7 @@ export default function Section4Problems({ onNext }) {
           <span>[ CHAPTER 03: TRADITIONAL SIGNATURE FAILURE MODES ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 04 / 16
+          SLIDE 07 / 24
         </span>
       </div>
 

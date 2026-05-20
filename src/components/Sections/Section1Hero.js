@@ -13,7 +13,7 @@ export default function Section1Hero({ onNext }) {
           <span>[ SWISS_PROT: DIGITAL_SIGNATURES_DECK ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 01 / 16
+          SLIDE 01 / 24
         </span>
       </div>
 
