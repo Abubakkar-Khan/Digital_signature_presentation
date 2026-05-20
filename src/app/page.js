@@ -120,18 +120,16 @@ export default function Home() {
       {/* Floating Head Navbar */}
       <Navbar currentSlide={currentSlide} goToSlide={setCurrentSlide} />
 
-      {/* Main Slide Deck Presenter Container */}
-      <div className="flex-1 w-full max-w-7xl mx-auto p-4 md:p-6 overflow-hidden flex flex-col justify-center">
-        <div className="w-full h-full max-h-[640px] border-3 border-black bg-[#13141C] rounded-lg shadow-[8px_8px_0px_#000] relative overflow-y-auto">
-          {renderSlide()}
-        </div>
+      {/* Main Slide Deck Presenter Container - Full Screen Cover */}
+      <div className="flex-1 w-full h-full relative bg-[#13141C] overflow-hidden">
+        {renderSlide()}
       </div>
       
       {/* Visual Keyboard navigation helper footer */}
-      <div className="w-full text-center pb-2 bg-[#0E0F12] text-[9px] font-mono text-gray-500 flex justify-center gap-4">
+      <div className="w-full text-center py-2 bg-[#0E0F12] text-[9px] font-mono text-gray-500 flex justify-center gap-4 border-t-2 border-black">
         <span>⌨️ [ Use Left / Right Arrow keys to navigate slides ]</span>
         <span>•</span>
-        <span>🖥️ [ Designed for desktop presentation viewports ]</span>
+        <span>🖥️ [ Full-Screen Presentation Mode ]</span>
       </div>
     </main>
   );
