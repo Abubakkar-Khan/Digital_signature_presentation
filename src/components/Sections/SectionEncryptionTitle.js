@@ -9,10 +9,10 @@ export default function SectionEncryptionTitle({ onNext }) {
       <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
         <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
           <Key className="w-4 h-4 text-[#007AFF]" />
-          <span>[ CHAPTER 19: TITLE CARD ]</span>
+          <span>[ CHAPTER 19: ENCRYPTION INTRODUCTION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 22 / 27
+          SLIDE 21 / 27
         </span>
       </div>
 
@@ -30,20 +30,20 @@ export default function SectionEncryptionTitle({ onNext }) {
         </h1>
 
         <p className="text-gray-400 font-mono text-xs max-w-md leading-relaxed mt-2">
-          From ancient shaved-head slave tattoos to modern asymmetric RSA keypairs that lock and unlock secrets mathematically.
+          From ancient shaved-head slave ciphers to modern mathematical keypairs that lock and unlock secrets.
         </p>
       </div>
 
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          Ready to verify. Press next to learn about ancient ciphers.
+          Ready to explore. Click next to define encryption.
         </span>
         <button
           onClick={onNext}
           className="px-6 py-2.5 doodle-btn doodle-btn-blue text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          Next: History Ciphers
+          Next: Define Encryption →
         </button>
       </div>
     </div>

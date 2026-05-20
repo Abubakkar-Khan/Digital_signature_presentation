@@ -48,8 +48,19 @@ export default function Home() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "ArrowRight") setCurrentSlide((p) => Math.min(p + 1, TOTAL));
-      if (e.key === "ArrowLeft")  setCurrentSlide((p) => Math.max(p - 1, 1));
+      // If focused on an input or textarea, let the default behavior happen
+      const activeTag = document.activeElement?.tagName;
+      if (activeTag === "INPUT" || activeTag === "TEXTAREA" || document.activeElement?.isContentEditable) {
+        return;
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        setCurrentSlide((p) => Math.min(p + 1, TOTAL));
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        setCurrentSlide((p) => Math.max(p - 1, 1));
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
@@ -89,8 +100,8 @@ export default function Home() {
       case 20: return <Section8Huge8       onNext={next} />;
 
       // ── Encryption ────────────────────────────────────────────────
-      case 21: return <SectionEncryptionDefinition onNext={next} />;
-      case 22: return <SectionEncryptionTitle      onNext={next} />;
+      case 21: return <SectionEncryptionTitle      onNext={next} />;
+      case 22: return <SectionEncryptionDefinition onNext={next} />;
       case 23: return <Section9History             onNext={next} />;
       case 24: return <Section10Modern             onNext={next} />;
 
