@@ -58,7 +58,7 @@ function verifyDocument(doc, signature, publicKey) {
           <span>[ CHAPTER 22: LIVE CODE SIMULATION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 23 / 24
+          SLIDE 25 / 26
         </span>
       </div>
 

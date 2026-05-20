@@ -49,7 +49,7 @@ export default function Section11Process({ onNext }) {
           <span>[ CHAPTER 10: THE CRYPTOGRAPHIC PIPELINE WORKFLOW ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 20 / 24
+          SLIDE 22 / 26
         </span>
       </div>
 

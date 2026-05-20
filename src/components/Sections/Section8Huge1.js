@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, ShieldAlert } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function Section8Huge1({ onNext }) {
   return (
@@ -12,7 +12,7 @@ export default function Section8Huge1({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 1 - THE GPU LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 10 / 24
+          SLIDE 11 / 26
         </span>
       </div>
 
@@ -20,7 +20,7 @@ export default function Section8Huge1({ onNext }) {
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
           <span className="px-2 py-0.5 text-[10px] font-mono text-black bg-[#FFCC00] border border-black uppercase w-max mb-3">
-            KEYSPACE MULTIPLIER: 2^32 (1 OF 8)
+            KEYSPACE MULTIPLIER: LAYER 1
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
             The GPU <br />
@@ -31,8 +31,15 @@ export default function Section8Huge1({ onNext }) {
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
             Imagine one high-power custom computer packed with modern graphics cards, specifically configured to guess document key hashes.
           </p>
-          <div className="p-3 border-2 border-black bg-[#181922] rounded font-mono text-lg text-white font-black text-center">
-            🚀 4 Billion Hashes / Second
+
+          {/* Mathematical Multiplier Sequence */}
+          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
+            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
+              MULTIPLIER SEQUENCE (1x)
+            </span>
+            <div className="font-mono text-xs md:text-sm text-[#FFCC00] font-black break-all leading-tight">
+              4,000,000,000
+            </div>
           </div>
         </div>
 

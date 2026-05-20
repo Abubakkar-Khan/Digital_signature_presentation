@@ -12,7 +12,7 @@ export default function Section8Huge5({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 5 - THE UNIVERSE LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 14 / 24
+          SLIDE 15 / 26
         </span>
       </div>
 
@@ -20,7 +20,7 @@ export default function Section8Huge5({ onNext }) {
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
           <span className="px-2 py-0.5 text-[10px] font-mono text-white bg-[#007AFF] border border-black uppercase w-max mb-3">
-            KEYSPACE MULTIPLIER: 4 BILLION * MILKY WAYS (5 OF 8)
+            KEYSPACE MULTIPLIER: LAYER 5
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
             The Universe <br />
@@ -31,8 +31,15 @@ export default function Section8Huge5({ onNext }) {
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
             Imagine 4 billion copies of the Milky Way galaxy. This massive, hypothetical network—a <strong>"Giga Galactic supercomputer"</strong> grid running in unison—would compute hashes across the cosmos.
           </p>
-          <div className="p-3 border-2 border-black bg-[#181922] rounded font-mono text-lg text-white font-black text-center">
-            🌌 2^160 Hashes / Second
+
+          {/* Mathematical Multiplier Sequence */}
+          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
+            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
+              MULTIPLIER SEQUENCE (5x)
+            </span>
+            <div className="font-mono text-xs md:text-sm text-[#007AFF] font-black break-all leading-tight">
+              4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000
+            </div>
           </div>
         </div>
 
@@ -42,7 +49,7 @@ export default function Section8Huge5({ onNext }) {
             <span className="text-[9px] font-mono text-gray-500 uppercase">COSMIC NETWORK GRID</span>
 
             <div className="w-full p-4 border-2 border-black bg-black rounded-lg text-center">
-              <pre className="text-[9px] text-[#007AFF] font-mono leading-none whitespace-pre bg-transparent border-0 p-0 m-0">
+              <pre className="text-[9px] text-[#007AFF] font-mono leading-none whitespace-pre bg-transparent border-0 p-0 m-0 w-full">
                 {`   🌀 🌀 🌀 🌀
    🌀 🌀 🌀 🌀
    🌀 🌀 🌀 🌀

@@ -12,7 +12,7 @@ export default function Section8Huge8({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 8 - THE ODDS CONCLUSION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 17 / 24
+          SLIDE 18 / 26
         </span>
       </div>
 
@@ -31,8 +31,15 @@ export default function Section8Huge8({ onNext }) {
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
             Even after all that time (37x age of the universe), with that giga-galactic botnet computing $2^{160}$ guesses per second... your massive supercomputer would still only have a:
           </p>
-          <div className="p-3 border-2 border-black bg-[#181922] rounded font-mono text-lg text-[#FF3B30] font-black text-center">
-            🎯 1 in 4 Billion Chance of Guessing Correctly
+
+          {/* Mathematical Multiplier Sequence */}
+          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
+            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
+              MULTIPLIER SEQUENCE (8x)
+            </span>
+            <div className="font-mono text-[8px] md:text-[9px] text-[#007AFF] font-black break-all leading-tight">
+              4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000
+            </div>
           </div>
         </div>
 

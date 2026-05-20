@@ -3,18 +3,18 @@
 import { ShieldCheck } from "lucide-react";
 
 export default function Navbar({ currentSlide, goToSlide }) {
-  const scrollProgress = (currentSlide / 24) * 100;
+  const scrollProgress = (currentSlide / 26) * 100;
 
   // Define categories and their starting slide index (1-indexed)
   const navItems = [
     { label: "Intro", categoryId: "intro", slideIndex: 1 },
     { label: "Hamza Story", categoryId: "story", slideIndex: 2 },
     { label: "Existence", categoryId: "existence", slideIndex: 8 },
-    { label: "Live Hash", categoryId: "hash", slideIndex: 9 },
-    { label: "2^256 Scale", categoryId: "scale", slideIndex: 10 },
+    { label: "Hash", categoryId: "hash", slideIndex: 9 },
+    { label: "2^256 Scale", categoryId: "scale", slideIndex: 11 },
     { label: "Encryption", categoryId: "encryption", slideIndex: 19 },
-    { label: "Blueprint", categoryId: "blueprint", slideIndex: 22 },
-    { label: "Live Code", categoryId: "code", slideIndex: 23 },
+    { label: "Blueprint", categoryId: "blueprint", slideIndex: 24 },
+    { label: "Live Code", categoryId: "code", slideIndex: 25 },
   ];
 
   // Helper to find which category is active based on currentSlide index
@@ -22,10 +22,10 @@ export default function Navbar({ currentSlide, goToSlide }) {
     if (currentSlide === 1) return "intro";
     if (currentSlide >= 2 && currentSlide <= 6) return "story";
     if (currentSlide === 7 || currentSlide === 8) return "existence";
-    if (currentSlide === 9) return "hash";
-    if (currentSlide >= 10 && currentSlide <= 17) return "scale";
-    if (currentSlide >= 18 && currentSlide <= 21) return "encryption";
-    if (currentSlide === 22) return "blueprint";
+    if (currentSlide === 9 || currentSlide === 10) return "hash";
+    if (currentSlide >= 11 && currentSlide <= 18) return "scale";
+    if (currentSlide >= 19 && currentSlide <= 23) return "encryption";
+    if (currentSlide === 24) return "blueprint";
     return "code";
   };
 
@@ -79,7 +79,7 @@ export default function Navbar({ currentSlide, goToSlide }) {
         {/* Slide Counter Indicator */}
         <div className="flex items-center gap-3">
           <div className="px-2.5 py-1 border-2 border-black bg-black text-[9px] text-[var(--swiss-yellow)] font-mono uppercase tracking-widest">
-            SLIDE {currentSlide.toString().padStart(2, "0")} / 24
+            SLIDE {currentSlide.toString().padStart(2, "0")} / 26
           </div>
         </div>
       </nav>

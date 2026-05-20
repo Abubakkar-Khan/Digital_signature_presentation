@@ -52,7 +52,7 @@ export default function Section6HashExplain({ onNext }) {
           <span>[ CHAPTER 05: THE SHA-256 AVALANCHE EFFECT ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 09 / 24
+          SLIDE 10 / 26
         </span>
       </div>
 
@@ -160,16 +160,15 @@ export default function Section6HashExplain({ onNext }) {
         </div>
       </div>
 
-      {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          Avalanche grid calculator running. Tap next to analyze the mechanics of SHA-256 conveyor belt.
+          Avalanche grid calculator running. Tap next to see the keyspace multiplier scaling calculation.
         </span>
         <button
           onClick={onNext}
           className="px-6 py-2.5 doodle-btn doodle-btn-red text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          See SHA Engine
+          See Keyspace Scale
         </button>
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function Section10Modern({ onNext }) {
           <span>[ CHAPTER 18: DEFINING MODERN ENCRYPTION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 19 / 24
+          SLIDE 21 / 26
         </span>
       </div>
 

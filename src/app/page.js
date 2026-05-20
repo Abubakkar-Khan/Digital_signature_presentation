@@ -12,6 +12,7 @@ import Section3Hamza4 from "@/components/Sections/Section3Hamza4";
 import Section3Hamza5 from "@/components/Sections/Section3Hamza5";
 import Section4Problems from "@/components/Sections/Section4Problems";
 import Section5Pillars from "@/components/Sections/Section5Pillars";
+import SectionHashTitle from "@/components/Sections/SectionHashTitle";
 import Section6HashExplain from "@/components/Sections/Section6HashExplain";
 import Section8Huge1 from "@/components/Sections/Section8Huge1";
 import Section8Huge2 from "@/components/Sections/Section8Huge2";
@@ -21,6 +22,7 @@ import Section8Huge5 from "@/components/Sections/Section8Huge5";
 import Section8Huge6 from "@/components/Sections/Section8Huge6";
 import Section8Huge7 from "@/components/Sections/Section8Huge7";
 import Section8Huge8 from "@/components/Sections/Section8Huge8";
+import SectionEncryptionTitle from "@/components/Sections/SectionEncryptionTitle";
 import Section9History from "@/components/Sections/Section9History";
 import Section10Modern from "@/components/Sections/Section10Modern";
 import Section11Process from "@/components/Sections/Section11Process";
@@ -36,7 +38,7 @@ export default function Home() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowRight") {
-        setCurrentSlide((prev) => Math.min(prev + 1, 24));
+        setCurrentSlide((prev) => Math.min(prev + 1, 26));
       } else if (e.key === "ArrowLeft") {
         setCurrentSlide((prev) => Math.max(prev - 1, 1));
       }
@@ -46,7 +48,7 @@ export default function Home() {
   }, []);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, 24));
+    setCurrentSlide((prev) => Math.min(prev + 1, 26));
   };
 
   const restartDeck = () => {
@@ -73,36 +75,40 @@ export default function Home() {
       case 8:
         return <Section5Pillars onNext={nextSlide} />;
       case 9:
-        return <Section6HashExplain onNext={nextSlide} />;
+        return <SectionHashTitle onNext={nextSlide} />;
       case 10:
-        return <Section8Huge1 onNext={nextSlide} />;
+        return <Section6HashExplain onNext={nextSlide} />;
       case 11:
-        return <Section8Huge2 onNext={nextSlide} />;
+        return <Section8Huge1 onNext={nextSlide} />;
       case 12:
-        return <Section8Huge3 onNext={nextSlide} />;
+        return <Section8Huge2 onNext={nextSlide} />;
       case 13:
-        return <Section8Huge4 onNext={nextSlide} />;
+        return <Section8Huge3 onNext={nextSlide} />;
       case 14:
-        return <Section8Huge5 onNext={nextSlide} />;
+        return <Section8Huge4 onNext={nextSlide} />;
       case 15:
-        return <Section8Huge6 onNext={nextSlide} />;
+        return <Section8Huge5 onNext={nextSlide} />;
       case 16:
-        return <Section8Huge7 onNext={nextSlide} />;
+        return <Section8Huge6 onNext={nextSlide} />;
       case 17:
-        return <Section8Huge8 onNext={nextSlide} />;
+        return <Section8Huge7 onNext={nextSlide} />;
       case 18:
-        return <Section9History onNext={nextSlide} />;
+        return <Section8Huge8 onNext={nextSlide} />;
       case 19:
-        return <Section10Modern onNext={nextSlide} />;
+        return <SectionEncryptionTitle onNext={nextSlide} />;
       case 20:
-        return <Section11Process onNext={nextSlide} />;
+        return <Section9History onNext={nextSlide} />;
       case 21:
-        return <Section13NonRepudiation onNext={nextSlide} />;
+        return <Section10Modern onNext={nextSlide} />;
       case 22:
-        return <Section13DocDroc onNext={nextSlide} />;
+        return <Section11Process onNext={nextSlide} />;
       case 23:
-        return <SectionCodeSimulation onNext={nextSlide} />;
+        return <Section13NonRepudiation onNext={nextSlide} />;
       case 24:
+        return <Section13DocDroc onNext={nextSlide} />;
+      case 25:
+        return <SectionCodeSimulation onNext={nextSlide} />;
+      case 26:
         return <Section14Closing onRestart={restartDeck} />;
       default:
         return <Section1Hero onNext={nextSlide} />;

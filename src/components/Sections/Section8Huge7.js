@@ -12,7 +12,7 @@ export default function Section8Huge7({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 7 - TIME MULTIPLIER 2 ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 16 / 24
+          SLIDE 17 / 26
         </span>
       </div>
 
@@ -20,7 +20,7 @@ export default function Section8Huge7({ onNext }) {
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
           <span className="px-2 py-0.5 text-[10px] font-mono text-black bg-[#FFCC00] border border-black uppercase w-max mb-3">
-            KEYSPACE MULTIPLIER: 4 BILLION * 126 YEARS (7 OF 8)
+            KEYSPACE MULTIPLIER: LAYER 7
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
             The Cosmic <br />
@@ -31,8 +31,15 @@ export default function Section8Huge7({ onNext }) {
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
             Multiply that running duration by another 4 billion. The total computation span equals approximately 507 billion years. This is <strong>37 times the age of the universe</strong>.
           </p>
-          <div className="p-3 border-2 border-black bg-[#181922] rounded font-mono text-lg text-white font-black text-center">
-            ⏳ 507 Billion Years (37x Age of Universe)
+
+          {/* Mathematical Multiplier Sequence */}
+          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
+            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
+              MULTIPLIER SEQUENCE (7x)
+            </span>
+            <div className="font-mono text-[9px] md:text-[10px] text-[#FFCC00] font-black break-all leading-tight">
+              4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000
+            </div>
           </div>
         </div>
 

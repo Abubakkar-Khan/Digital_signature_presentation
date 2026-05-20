@@ -12,7 +12,7 @@ export default function Section8Huge6({ onNext }) {
           <span>[ THE SCALE OF 2^256: LAYER 6 - TIME MULTIPLIER 1 ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 15 / 24
+          SLIDE 16 / 26
         </span>
       </div>
 
@@ -20,7 +20,7 @@ export default function Section8Huge6({ onNext }) {
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
           <span className="px-2 py-0.5 text-[10px] font-mono text-white bg-[#FF3B30] border border-black uppercase w-max mb-3">
-            KEYSPACE MULTIPLIER: 4 BILLION SECONDS (6 OF 8)
+            KEYSPACE MULTIPLIER: LAYER 6
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
             The Century <br />
@@ -31,8 +31,15 @@ export default function Section8Huge6({ onNext }) {
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
             Run this massive Giga Galactic supercomputer network non-stop for a duration of 4 billion seconds. How long is that in human years?
           </p>
-          <div className="p-3 border-2 border-black bg-[#181922] rounded font-mono text-lg text-white font-black text-center">
-            ⏳ 126.8 Years of Computing
+
+          {/* Mathematical Multiplier Sequence */}
+          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
+            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
+              MULTIPLIER SEQUENCE (6x)
+            </span>
+            <div className="font-mono text-xs md:text-[11px] text-[#FF3B30] font-black break-all leading-tight">
+              4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000
+            </div>
           </div>
         </div>
 

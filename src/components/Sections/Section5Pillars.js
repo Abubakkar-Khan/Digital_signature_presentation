@@ -39,7 +39,7 @@ export default function Section5Pillars({ onNext }) {
           <span>[ CHAPTER 08: DIGITAL SIGNATURE EXISTENCE ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 08 / 24
+          SLIDE 08 / 26
         </span>
       </div>
 
@@ -95,13 +95,13 @@ export default function Section5Pillars({ onNext }) {
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          Cybersecurity pillars verified. Click next to review the digital signature pipeline.
+          Cybersecurity pillars verified. Click next to enter the cryptographic hashing section.
         </span>
         <button
           onClick={onNext}
           className="px-6 py-2.5 doodle-btn doodle-btn-magenta text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          See Sign Pipeline
+          See Hash Intro
         </button>
       </div>
     </div>
