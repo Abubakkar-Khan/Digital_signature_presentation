@@ -18,17 +18,40 @@ export default function Section8Huge8({ onNext, goToSlide }) {
               Odds Verdict
             </span>
           </h2>
-          <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            Even after all that time (37x age of the universe), with that giga-galactic botnet computing $2^{160}$ guesses per second... your massive supercomputer would still only have a:
+          <p className="text-gray-400 font-mono text-xs leading-relaxed mb-3">
+            Even after all that time (37x age of the universe), with that giga-galactic botnet computing 2<sup>160</sup> guesses per second... your massive supercomputer would still only have a:
           </p>
 
-          {/* Mathematical Multiplier Sequence */}
-          <div className="p-3.5 border-2 border-black bg-black rounded-lg mb-4">
-            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">
-              MULTIPLIER SEQUENCE (8x)
-            </span>
-            <div className="font-mono text-[8px] md:text-[9px] text-[#007AFF] font-black break-all leading-tight">
-              4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000 × 4,000,000,000
+          {/* Premium Glowing Cyber Warning Card */}
+          <div className="border-[3px] border-[#FF3B30] bg-[#130707] rounded-xl p-4 shadow-[4px_4px_0px_#000] space-y-3 mb-3 relative overflow-hidden">
+            {/* Absolute flashing corner alert */}
+            <div className="absolute top-0 right-0 px-2 py-0.5 bg-[#FF3B30] text-black font-mono font-black text-[8px] uppercase tracking-wider rounded-bl-lg animate-pulse">
+              CRITICAL VERDICT
+            </div>
+
+            <div className="space-y-1">
+              <span className="text-[9px] font-mono text-[#FF3B30] uppercase font-black tracking-widest block">
+                🚨 ULTIMATE PROBABILITY
+              </span>
+              <div className="font-space font-black text-3xl md:text-4xl text-[#FF3B30] leading-none uppercase">
+                1 in 4 Billion Chance
+              </div>
+              <div className="text-[10px] font-mono font-bold text-[#FFCC00] leading-none">
+                (Exactly 1 in 4,294,967,296 to guess the correct hash!)
+              </div>
+            </div>
+
+            {/* Micro Math Breakdown */}
+            <div className="border-t border-red-950/40 pt-2 space-y-1.5 text-[10px] font-mono">
+              <div className="text-gray-300">
+                <span className="text-[#FFCC00] font-bold">The Math:</span> Testing <strong className="text-white">2<sup>224</sup></strong> hashes over <strong className="text-white">507B years</strong> successfully cracks <strong className="text-[#34C759]">7 of the 8 multiplications</strong> of 4 Billion:
+              </div>
+              <div className="bg-black/80 px-2 py-1 rounded text-[8px] text-[#34C759] text-center font-bold font-mono">
+                4B × 4B × 4B × 4B × 4B × 4B × 4B
+              </div>
+              <div className="text-gray-400 text-[9px] leading-snug">
+                This leaves the <strong className="text-white">8th layer (2<sup>32</sup>)</strong> completely untouched, resulting in a remaining <strong className="text-[#FF3B30] font-bold">1 in 4 Billion chance</strong> to crack the final layer.
+              </div>
             </div>
           </div>
         </div>
