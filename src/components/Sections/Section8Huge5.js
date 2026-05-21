@@ -13,7 +13,7 @@ export default function Section8Huge5({ onNext, goToSlide }) {
           <span>[ THE SCALE OF 2^256: LAYER 5 - THE UNIVERSE LEVEL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 18 / 28
+          SLIDE 18 / 30
         </span>
       </div>
 

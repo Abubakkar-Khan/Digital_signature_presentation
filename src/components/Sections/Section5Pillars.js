@@ -39,7 +39,7 @@ export default function Section5Pillars({ onNext }) {
           <span>[ CHAPTER 08: DIGITAL SIGNATURE EXISTENCE ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 08 / 27
+          SLIDE 09 / 30
         </span>
       </div>
 

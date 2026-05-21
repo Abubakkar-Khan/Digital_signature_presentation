@@ -12,7 +12,7 @@ export default function Section3Hamza4({ onNext }) {
           <span>[ THE STORY OF HAMZA: PART 4 - THE SUMMONS ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 05 / 27
+          SLIDE 06 / 30
         </span>
       </div>
 
@@ -38,14 +38,14 @@ export default function Section3Hamza4({ onNext }) {
 
         {/* Visual Graphic */}
         <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[220px] flex flex-col justify-between items-center">
+          <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[270px] flex flex-col justify-between items-center">
             <span className="text-[9px] font-mono text-gray-500 uppercase">COURT RECORD FILE</span>
 
             {/* Summons card */}
             <div className="w-full p-4 border-2 border-black bg-[#0E0F12] rounded-lg">
               <div className="text-left font-mono text-[9px] text-[#FFCC00] space-y-1">
                 <div className="border-b border-black pb-1 mb-2 font-black uppercase text-center">⚖️ CIVIL LAW SUMMONS</div>
-                <div>PLAINTIFF: John Doe Inc.</div>
+                <div>PLAINTIFF: Sajid</div>
                 <div>DEFENDANT: Hamza Software House</div>
                 <div>CAUSE: Contract Default (Page 24 signed)</div>
               </div>

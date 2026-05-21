@@ -46,7 +46,7 @@ export default function SectionProcessAnimated({ onNext }) {
           <span>[ CHAPTER 09: HOW DIGITAL SIGNATURES WORK ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 09 / 27
+          SLIDE 10 / 30
         </span>
       </div>
 

@@ -1,10 +1,10 @@
 "use client";
 
-import { FileText, Feather, ShieldAlert, CheckCircle } from "lucide-react";
+import { FileText, Feather, ShieldAlert, CheckCircle2 } from "lucide-react";
 
 export default function Section2WhatIsSignature({ onNext }) {
   return (
-    <div className="w-full h-full flex flex-col justify-between p-4 md:p-8 swiss-grid relative overflow-hidden">
+    <div className="w-full h-full flex flex-col justify-between p-4 md:p-8 swiss-grid relative overflow-hidden bg-[#0A0B0D]">
       {/* Slide Header */}
       <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-4">
         <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
@@ -12,15 +12,15 @@ export default function Section2WhatIsSignature({ onNext }) {
           <span>[ CHAPTER 01: THE CORE DEFINITION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 02 / 28
+          SLIDE 02 / 30
         </span>
       </div>
 
       {/* Main Grid */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         
-        {/* Left Side: Context & Weakness of Ink */}
-        <div className="col-span-1 md:col-span-5 flex flex-col justify-center h-full">
+        {/* Left Column: Context & Core Definition */}
+        <div className="col-span-1 md:col-span-6 flex flex-col justify-center h-full">
           <span className="px-2 py-0.5 text-[10px] font-mono text-white bg-[var(--swiss-red)] border border-black uppercase w-max mb-3">
             THE ORIGINAL CONCEPT
           </span>
@@ -31,78 +31,66 @@ export default function Section2WhatIsSignature({ onNext }) {
             </span>
           </h2>
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            For thousands of years, a signature has been a personal mark—ink on paper—proving that you read, authorized, and committed to a document.
+            For thousands of years, a signature has been the ultimate legal instrument of assent. It is a deliberate physical act representing a person's identity, intent, and binding consent to a document's contents.
           </p>
 
           {/* The Ink Signature Box */}
-          <div className="doodle-card p-4 border-[#FF3B30] bg-[#0E0F12] relative overflow-hidden">
-            <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">HANDWRITTEN WET INK (PAPER)</span>
-            <div className="py-4 text-center font-space text-3xl italic text-gray-300 border border-dashed border-gray-800 rounded font-normal select-none">
-              Hamza Khan
+          <div className="doodle-card p-4 border-[#FF3B30] bg-[#0E0F12] relative overflow-hidden min-h-[140px] flex flex-col justify-between">
+            <div>
+              <span className="text-[8px] font-mono text-gray-500 uppercase block mb-1">TRADITIONAL BIOMECHANICAL WET INK</span>
+              <div className="py-3 text-center font-space text-3xl italic text-gray-300 border border-dashed border-gray-800 rounded font-normal select-none">
+                Hamza Khan
+              </div>
             </div>
             
-            <div className="mt-3 flex items-start gap-1.5 text-[9px] font-mono text-red-400">
-              <ShieldAlert className="w-4 h-4 shrink-0 text-[#FF3B30]" />
-              <div>
-                <strong>The Paper Weakness:</strong> A paper signature is bound to the *page*, not the *content*. Swap page 1 of a 5-page document, and the signature on page 5 remains valid! It is trivially easy to forge.
-              </div>
+            <div className="mt-3 flex items-center gap-2 text-[9px] font-mono text-gray-400">
+              <CheckCircle2 className="w-4 h-4 text-[#34C759] shrink-0" />
+              <span>Historically validated by comparing handwriting biomechanics.</span>
             </div>
           </div>
         </div>
 
-        {/* Right Side: The Three Pillars of a Signature */}
-        <div className="col-span-1 md:col-span-7 flex flex-col gap-4">
-          <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest font-black">
-            THE THREE ABSOLUTE REQUIREMENTS OF ANY VALID SIGNATURE:
-          </span>
-
-          <div className="grid grid-cols-1 gap-3">
-            
-            {/* Requirement 1: Authentication */}
-            <div className="p-3 border-2 border-black rounded bg-[#181922] shadow-[2px_2px_0px_#000] flex gap-3 items-start">
-              <div className="p-1.5 border-2 border-black bg-black rounded text-[var(--swiss-yellow)] font-mono font-black text-xs">
-                01
+        {/* Right Column: Parchment Document Mock & The Analog Vulnerability */}
+        <div className="col-span-1 md:col-span-6 h-full flex flex-col justify-center">
+          <div className="doodle-card p-4 border-[#FFCC00] bg-[#13141C] flex flex-col justify-between min-h-[270px]">
+            <div>
+              <div className="flex items-center justify-between pb-2 border-b border-black mb-3">
+                <span className="text-[9px] font-mono text-gray-400 uppercase font-black">
+                  Analog Contract Blueprint
+                </span>
+                <span className="text-[8px] font-mono text-[#FFCC00] font-black uppercase">
+                  [ PHYSICAL PAGE ]
+                </span>
               </div>
-              <div>
-                <h3 className="text-xs font-space font-black uppercase text-white mb-0.5">
-                  1. Authentication (Identity)
-                </h3>
-                <p className="text-[10px] font-mono text-gray-400 leading-snug">
-                  It must mathematically prove exactly *who* signed the document. Impersonation or copying a signature must be physically impossible.
+
+              {/* Scroll Document Graphic */}
+              <div className="p-3 border-2 border-black bg-[#FAF0D7] text-black rounded-lg min-h-[120px] font-mono text-[9px] leading-relaxed shadow-[3px_3px_0px_#000] relative overflow-hidden">
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#FF3B30] border-2 border-black rotate-45 flex items-center justify-center text-white font-black pt-5 text-[8px]">
+                  SEAL
+                </div>
+                <div className="font-bold border-b border-black/20 pb-1 mb-2 text-center text-[10px] uppercase">
+                  📄 AGREEMENT OF SERVICES
+                </div>
+                <p className="text-black/75 italic">
+                  "This document certifies that the undersigned party agrees to deliver all software services as specified. Any changes to this document must be written in ink."
                 </p>
+                <div className="mt-4 pt-2 border-t border-black/20 flex justify-between items-baseline">
+                  <span>Authorized Signature:</span>
+                  <span className="font-space italic border-b border-black w-24 text-center font-bold text-[#007AFF] text-xs">
+                    Hamza Khan
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Requirement 2: Integrity */}
-            <div className="p-3 border-2 border-black rounded bg-[#181922] shadow-[2px_2px_0px_#000] flex gap-3 items-start">
-              <div className="p-1.5 border-2 border-black bg-black rounded text-[#34C759] font-mono font-black text-xs">
-                02
-              </div>
-              <div>
-                <h3 className="text-xs font-space font-black uppercase text-white mb-0.5">
-                  2. Integrity (Unchanged Content)
-                </h3>
-                <p className="text-[10px] font-mono text-gray-400 leading-snug">
-                  It must prove the document *has not changed a single character* since it was signed. If someone edits a decimal point, the signature must instantly shatter.
-                </p>
+            {/* Crucial Vulnerability Explainer */}
+            <div className="mt-4 p-3 bg-black border-2 border-black rounded-lg flex gap-2">
+              <ShieldAlert className="w-5 h-5 text-[#FF3B30] shrink-0" />
+              <div className="font-mono text-[9px] text-gray-300 leading-snug">
+                <strong className="text-[#FF3B30] uppercase block mb-0.5">The Analog Vulnerability:</strong>
+                A traditional ink signature is only physically bound to the <span className="text-white font-bold">paper sheet</span>, not the actual text. If a bad actor swaps the pages above the signature line, the signature remains physically unchanged. It has no mathematical awareness of the words it authorizes.
               </div>
             </div>
-
-            {/* Requirement 3: Non-Repudiation */}
-            <div className="p-3 border-2 border-black rounded bg-[#181922] shadow-[2px_2px_0px_#000] flex gap-3 items-start">
-              <div className="p-1.5 border-2 border-black bg-black rounded text-[#007AFF] font-mono font-black text-xs">
-                03
-              </div>
-              <div>
-                <h3 className="text-xs font-space font-black uppercase text-white mb-0.5">
-                  3. Non-Repudiation (Legal Binding)
-                </h3>
-                <p className="text-[10px] font-mono text-gray-400 leading-snug">
-                  The signer *cannot deny* their signature. Since only they hold their secret cryptographic key, they cannot claim: "Someone else signed this for me."
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
 

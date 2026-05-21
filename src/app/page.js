@@ -33,19 +33,30 @@ import Section8Huge7 from "@/components/Sections/Section8Huge7";
 import Section8Huge8 from "@/components/Sections/Section8Huge8";
 
 // Encryption
-import SectionEncryptionDefinition from "@/components/Sections/SectionEncryptionDefinition";
 import SectionEncryptionTitle from "@/components/Sections/SectionEncryptionTitle";
-import Section9History from "@/components/Sections/Section9History";
+import SectionEncryptionDefinition from "@/components/Sections/SectionEncryptionDefinition";
+import Section9Steganography from "@/components/Sections/Section9Steganography";
+import Section9Caesar from "@/components/Sections/Section9Caesar";
 import Section10Modern from "@/components/Sections/Section10Modern";
 
+// Asymmetric Math & Rationale
+import SectionEncryptionRSA from "@/components/Sections/SectionEncryptionRSA";
+import SectionRSAWhyHash from "@/components/Sections/SectionRSAWhyHash";
+
 // End game
-import Section13NonRepudiation from "@/components/Sections/Section13NonRepudiation";
 import Section13DocDroc from "@/components/Sections/Section13DocDroc";
 import Section14Closing from "@/components/Sections/Section14Closing";
 
 export default function Home() {
-  const TOTAL = 28;
+  const TOTAL = 30;
   const [currentSlide, setCurrentSlide] = useState(1);
+
+  // Blur focused elements when slide changes to prevent keyboard hijacking
+  useEffect(() => {
+    if (typeof document !== "undefined" && document.activeElement) {
+      document.activeElement.blur();
+    }
+  }, [currentSlide]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -110,13 +121,17 @@ export default function Home() {
       // ── Encryption ────────────────────────────────────────────────
       case 22: return <SectionEncryptionTitle      onNext={next} />;
       case 23: return <SectionEncryptionDefinition onNext={next} />;
-      case 24: return <Section9History             onNext={next} />;
-      case 25: return <Section10Modern             onNext={next} />;
+      case 24: return <Section9Steganography       onNext={next} />;
+      case 25: return <Section9Caesar              onNext={next} />;
+      case 26: return <Section10Modern             onNext={next} />;
+
+      // ── Asymmetric Math & Rationale ───────────────────────────────
+      case 27: return <SectionEncryptionRSA        onNext={next} />;
+      case 28: return <SectionRSAWhyHash           onNext={next} />;
 
       // ── Endgame ───────────────────────────────────────────────────
-      case 26: return <Section13NonRepudiation     onNext={next} />;
-      case 27: return <Section13DocDroc            onNext={next} />;
-      case 28: return <Section14Closing            onRestart={restart} />;
+      case 29: return <Section13DocDroc            onNext={next} />;
+      case 30: return <Section14Closing            onRestart={restart} />;
 
       default: return <Section1Hero onNext={next} />;
     }

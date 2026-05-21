@@ -12,7 +12,7 @@ export default function Section3Hamza3({ onNext }) {
           <span>[ THE STORY OF HAMZA: PART 3 - THE GHOSTING ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 04 / 27
+          SLIDE 05 / 30
         </span>
       </div>
 

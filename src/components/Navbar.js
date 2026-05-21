@@ -2,7 +2,7 @@
 
 import { ShieldCheck } from "lucide-react";
 
-export default function Navbar({ currentSlide, goToSlide, total = 27 }) {
+export default function Navbar({ currentSlide, goToSlide, total = 30 }) {
   const scrollProgress = (currentSlide / total) * 100;
 
   const navItems = [
@@ -13,7 +13,7 @@ export default function Navbar({ currentSlide, goToSlide, total = 27 }) {
     { label: "Hash",       categoryId: "hash",       slideIndex: 11 },
     { label: "2^256",      categoryId: "scale",      slideIndex: 14 },
     { label: "Encryption", categoryId: "encryption", slideIndex: 22 },
-    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 27 },
+    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 29 },
   ];
 
   const getActiveCategory = () => {
@@ -23,7 +23,7 @@ export default function Navbar({ currentSlide, goToSlide, total = 27 }) {
     if (currentSlide === 10)                            return "process";
     if (currentSlide >= 11 && currentSlide <= 13)       return "hash";
     if (currentSlide >= 14 && currentSlide <= 21)       return "scale";
-    if (currentSlide >= 22 && currentSlide <= 26)       return "encryption";
+    if (currentSlide >= 22 && currentSlide <= 28)       return "encryption";
     return "blueprint";
   };
 

@@ -12,7 +12,7 @@ export default function Section3Hamza5({ onNext }) {
           <span>[ THE STORY OF HAMZA: PART 5 - THE COURTROOM VERDICT ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 06 / 27
+          SLIDE 07 / 30
         </span>
       </div>
 
@@ -23,13 +23,13 @@ export default function Section3Hamza5({ onNext }) {
             HAMZA DEFAULTS SERIES: FINAL CHAPTER
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
-            The Judge's <br />
+            The Qazi's <br />
             <span className="px-2 py-0.5 bg-[#FF3B30] text-white border-2 border-black inline-block transform rotate-1 shadow-[2px_2px_0px_#000] rounded">
               Verdict
             </span>
           </h2>
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            The judge examines page 24. Since the scribble matches Hamza's license record, the court rules: <strong>THE SIGNATURE IS BINDING. PAY UP, HAMZA!</strong> Hamza is declared liable for damages.
+            The Qazi examines page 24. Since the scribble matches Hamza's license record, the court rules: <strong>THE SIGNATURE IS BINDING. PAY UP, HAMZA!</strong> Hamza is declared liable for damages.
           </p>
           <div className="p-3 border-2 border-black bg-[#181922] rounded text-[10px] font-mono text-gray-300">
             💡 <strong>The Cybersecurity Lesson:</strong> Traditional ink binds you, but if Hamza signed a digital Word doc with a fake PNG image, the proof is easily forgeable. We need math to ensure integrity!
@@ -38,10 +38,10 @@ export default function Section3Hamza5({ onNext }) {
 
         {/* Visual Graphic - Gavel Court Image */}
         <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[220px] flex flex-col justify-between items-center">
+          <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[270px] flex flex-col justify-between items-center">
             <span className="text-[9px] font-mono text-gray-500 uppercase">COURTROOM DECREE</span>
 
-            <div className="relative w-full h-[140px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center">
+            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center">
               <img
                 src="/gavel_court.png"
                 alt="Gavel Court"
@@ -50,7 +50,7 @@ export default function Section3Hamza5({ onNext }) {
             </div>
 
             <span className="text-[9px] font-mono text-[#FF3B30] font-black uppercase">
-              ⚖️ VERDICT: COURT DECLARES HAMZA LIABLE
+              ⚖️ VERDICT: QAZI DECLARES HAMZA LIABLE
             </span>
           </div>
         </div>

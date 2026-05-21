@@ -12,7 +12,7 @@ export default function Section13DocDroc({ onNext }) {
           <span>[ CHAPTER 12: DOCDROC SYSTEM ARCHITECTURE BLUEPRINT ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 26 / 27
+          SLIDE 29 / 30
         </span>
       </div>
 

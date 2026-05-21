@@ -6,16 +6,7 @@ import { ArrowRight, Shield, Terminal } from "lucide-react";
 export default function Section1Hero({ onNext }) {
   return (
     <div className="w-full h-full flex flex-col justify-between p-6 md:p-12 swiss-grid relative">
-      {/* Slide Index Tag / Swiss Top Bar */}
-      <div className="flex justify-between items-baseline border-b-[3px] border-black pb-4">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Terminal className="w-4 h-4 text-[#FF3B30]" />
-          <span>[ SWISS_PROT: DIGITAL_SIGNATURES_DECK ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 01 / 27
-        </span>
-      </div>
+
 
       {/* Hero Content - Swiss Asymmetry */}
       <div className="flex-1 flex flex-col md:flex-row gap-12 justify-center items-center my-6">

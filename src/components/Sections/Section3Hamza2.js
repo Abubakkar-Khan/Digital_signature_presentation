@@ -12,7 +12,7 @@ export default function Section3Hamza2({ onNext }) {
           <span>[ THE STORY OF HAMZA: PART 2 - THE INK SIGNATURE ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 03 / 27
+          SLIDE 04 / 30
         </span>
       </div>
 
@@ -38,7 +38,7 @@ export default function Section3Hamza2({ onNext }) {
 
         {/* Visual Graphic */}
         <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#007AFF] text-center min-h-[220px] flex flex-col justify-between items-center">
+          <div className="doodle-card p-4 border-[#007AFF] text-center min-h-[270px] flex flex-col justify-between items-center">
             <span className="text-[9px] font-mono text-gray-500 uppercase">PAGE 24 SCAN</span>
 
             {/* Simulated document signature box */}
@@ -49,7 +49,7 @@ export default function Section3Hamza2({ onNext }) {
               <div className="flex justify-between items-end">
                 <div>
                   <span className="text-[8px] font-mono text-gray-600 block">CLIENT SIGN:</span>
-                  <span className="text-xs font-mono text-gray-300 italic">John Doe</span>
+                  <span className="text-xs font-mono text-gray-300 italic">Sajid</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[8px] font-mono text-gray-600 block">HAMZA SIGN:</span>

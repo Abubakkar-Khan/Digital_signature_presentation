@@ -28,7 +28,7 @@ export default function Section14Closing({ onRestart }) {
           <span>[ SESSION_CLOSE: CELEBRATION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 27 / 27
+          SLIDE 30 / 30
         </span>
       </div>
 

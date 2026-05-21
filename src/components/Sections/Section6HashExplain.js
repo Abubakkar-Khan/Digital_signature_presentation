@@ -52,7 +52,7 @@ export default function Section6HashExplain({ onNext }) {
           <span>[ CHAPTER 05: THE SHA-256 AVALANCHE EFFECT ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 12 / 27
+          SLIDE 13 / 30
         </span>
       </div>
 

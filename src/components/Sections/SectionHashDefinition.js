@@ -43,7 +43,7 @@ export default function SectionHashDefinition({ onNext }) {
           <span>[ CHAPTER 10: WHAT IS A CRYPTOGRAPHIC HASH? ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 11 / 27
+          SLIDE 12 / 30
         </span>
       </div>
 

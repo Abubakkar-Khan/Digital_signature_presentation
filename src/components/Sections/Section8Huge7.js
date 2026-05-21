@@ -13,7 +13,7 @@ export default function Section8Huge7({ onNext, goToSlide }) {
           <span>[ THE SCALE OF 2^256: LAYER 7 - TIME MULTIPLIER 2 ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 20 / 28
+          SLIDE 20 / 30
         </span>
       </div>
 

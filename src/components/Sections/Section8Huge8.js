@@ -13,7 +13,7 @@ export default function Section8Huge8({ onNext, goToSlide }) {
           <span>[ THE SCALE OF 2^256: LAYER 8 - THE ODDS CONCLUSION ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 21 / 28
+          SLIDE 21 / 30
         </span>
       </div>
 
