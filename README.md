@@ -91,6 +91,16 @@ classDiagram
         +runSimulation() void
     }
 
+    class Section13DocDroc {
+        -function onNext
+        +upload +POST /:id/sign
+    }
+
+    class Section14Closing {
+        -function onRestart
+        +handleConfetti() void
+    }
+
     Home --> Navbar : "renders & synchronizes state"
     Home --> Section1Hero : "renders Slide 01"
     Home --> Section2WhatIsSignature : "renders Slide 02"
@@ -102,6 +112,8 @@ classDiagram
     Home --> Section9Caesar : "renders Slide 25"
     Home --> SectionEncryptionRSA : "renders Slide 27"
     Home --> SectionRSAWhyHash : "renders Slide 28"
+    Home --> Section13DocDroc : "renders Slide 29"
+    Home --> Section14Closing : "renders Slide 30"
 ```
 
 ---

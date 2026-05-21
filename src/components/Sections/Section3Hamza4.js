@@ -23,36 +23,34 @@ export default function Section3Hamza4({ onNext }) {
             HAMZA DEFAULTS SERIES: CHAPTER 04
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
-            The Client <br />
+            Sajid <br />
             <span className="px-2 py-0.5 bg-[#FFCC00] text-black border-2 border-black inline-block transform -rotate-1 shadow-[2px_2px_0px_#000] rounded">
               Sues Hamza
             </span>
           </h2>
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            The client goes to court, filing a formal lawsuit against Hamza's agency. Hamza receives a formal court summons at his office door. The legal process begins.
+            Having had enough of the ghosting, Sajid takes active legal action. He hires a lawyer, goes to court, and formally sues Hamza for breach of contract, presenting the signed paper SRS document as primary evidence.
           </p>
           <div className="p-3 border-2 border-black bg-[#181922] rounded text-[10px] font-mono text-gray-300">
-            ⚖️ <strong>The Legal Claims:</strong> Breach of contract, failure to deliver database deliverables.
+            ⚖️ <strong>The Legal Summons:</strong> Hamza is formally summoned to face the Qazi for defaulting on software engineering services.
           </div>
         </div>
 
         {/* Visual Graphic */}
         <div className="col-span-1 md:col-span-6">
           <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[270px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">COURT RECORD FILE</span>
+            <span className="text-[9px] font-mono text-gray-500 uppercase">COURTROOM PROCEEDINGS</span>
 
-            {/* Summons card */}
-            <div className="w-full p-4 border-2 border-black bg-[#0E0F12] rounded-lg">
-              <div className="text-left font-mono text-[9px] text-[#FFCC00] space-y-1">
-                <div className="border-b border-black pb-1 mb-2 font-black uppercase text-center">⚖️ CIVIL LAW SUMMONS</div>
-                <div>PLAINTIFF: Sajid</div>
-                <div>DEFENDANT: Hamza Software House</div>
-                <div>CAUSE: Contract Default (Page 24 signed)</div>
-              </div>
+            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
+              <img
+                src="/hamza_and_sajid_in_court.png"
+                alt="Sajid and Hamza in the courtroom before the Qazi"
+                className="w-full h-full object-cover animate-fade-in"
+              />
             </div>
 
             <span className="text-[9px] font-mono text-gray-400 italic">
-              "You have been formally summoned to appear in court..."
+              "The contract states page 24 contains Hamza's binding physical signature..."
             </span>
           </div>
         </div>
@@ -61,7 +59,7 @@ export default function Section3Hamza4({ onNext }) {
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          The court summons has arrived. Tap next to see the judge's final verdict.
+          The lawsuit is filed. Tap next to see the Qazi's final courtroom verdict.
         </span>
         <button
           onClick={onNext}

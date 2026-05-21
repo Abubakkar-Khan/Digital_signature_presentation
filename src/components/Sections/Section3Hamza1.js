@@ -38,20 +38,19 @@ export default function Section3Hamza1({ onNext }) {
 
         {/* Visual Graphic */}
         <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[220px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">PROTOTYPE SRS SIGNED</span>
+          <div className="doodle-card p-4 border-[#FFCC00] text-center min-h-[270px] flex flex-col justify-between items-center">
+            <span className="text-[9px] font-mono text-gray-500 uppercase">THE DEAL: CONTRACT SIGNED</span>
             
-            {/* Visual Block representation */}
-            <div className="w-full p-4 border-2 border-black bg-black rounded-lg text-center flex flex-col items-center">
-              <FileText className="w-12 h-12 text-[#FFCC00] mb-2" />
-              <div className="text-[10px] font-mono text-gray-300 leading-tight">
-                📄 <strong>SRS_FINAL_v2_signed.pdf</strong><br />
-                <span className="text-gray-500">Size: 4.8MB • Deposit Paid</span>
-              </div>
+            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
+              <img
+                src="/hamza_and_sajid_contract.png"
+                alt="Hamza and Sajid signing the contract"
+                className="w-full h-full object-cover animate-fade-in"
+              />
             </div>
 
             <span className="text-[9px] font-mono text-gray-400 italic">
-              "We agree to deliver the dashboard app as specified..."
+              "Hamza promises delivery in 3 months with a wet-ink signature..."
             </span>
           </div>
         </div>

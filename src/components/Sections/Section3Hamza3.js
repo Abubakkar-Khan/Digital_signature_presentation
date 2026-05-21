@@ -23,39 +23,34 @@ export default function Section3Hamza3({ onNext }) {
             HAMZA DEFAULTS SERIES: CHAPTER 03
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
-            The <br />
+            Sajid's <br />
             <span className="px-2 py-0.5 bg-[#FF3B30] text-white border-2 border-black inline-block transform -rotate-1 shadow-[2px_2px_0px_#000] rounded">
-              Ghosting
+              Tension
             </span>
           </h2>
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            3 months pass. No database application is built. Hamza buys coffee, shuts down his team Slack, closes his phone lines, and replies <code>0</code> messages. The client is left hanging.
+            3 months pass. The contract delivery deadline is long gone. Hamza is completely unreachable, not responding to calls, messages, or emails. Sajid is left sitting in immense tension, realizing he has been ghosted and defaulted.
           </p>
           <div className="p-3 border-2 border-black bg-[#181922] rounded text-[10px] font-mono text-gray-300">
-            ⚠️ <strong>Current Status:</strong> Hamza is completely offline. The client realizes they need legal actions.
+            ⚠️ <strong>Current Status:</strong> Sajid realizes the ink signature on paper didn't automatically guarantee code delivery.
           </div>
         </div>
 
         {/* Visual Graphic */}
         <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[220px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">HAMZA PHONE MONITOR</span>
+          <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[270px] flex flex-col justify-between items-center">
+            <span className="text-[9px] font-mono text-gray-500 uppercase">SAJID IN TENSION</span>
 
-            {/* Offline status screen */}
-            <div className="w-full p-4 border-2 border-black bg-[#0E0F12] rounded-lg">
-              <div className="flex justify-between items-center pb-2 border-b border-black mb-2 text-[9px] font-mono text-red-500">
-                <span>⚠️ SYSTEM DISCONNECTED</span>
-                <span>[ 404 ]</span>
-              </div>
-              <div className="text-[10px] font-mono text-gray-400 text-left space-y-1">
-                <div>📱 Message: "Hey Hamza, where is the code?"</div>
-                <div className="text-gray-600 italic">... Delivered (Unread)</div>
-                <div className="pt-2 text-red-500 font-black">❌ Last Active: 4 weeks ago</div>
-              </div>
+            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
+              <img
+                src="/sajid_sitting_in_tension.png"
+                alt="Sajid sitting in deep tension"
+                className="w-full h-full object-cover animate-fade-in"
+              />
             </div>
 
             <span className="text-[9px] font-mono text-gray-400 italic">
-              "Errors? Bug tickets? Sorry, I am out of office indefinitely."
+              "No code, no updates... what do I do about my deposit and project?"
             </span>
           </div>
         </div>
@@ -64,13 +59,13 @@ export default function Section3Hamza3({ onNext }) {
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          Hamza has ghosted. Tap next to see the client taking legal actions.
+          Sajid is in tension. Tap next to see the legal action he takes.
         </span>
         <button
           onClick={onNext}
           className="px-6 py-2.5 doodle-btn doodle-btn-red text-[10px] font-black uppercase border-2 border-black cursor-pointer"
         >
-          Next: The Courtroom
+          Next: Sajid Sues Hamza
         </button>
       </div>
     </div>

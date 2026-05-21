@@ -23,34 +23,34 @@ export default function Section3Hamza5({ onNext }) {
             HAMZA DEFAULTS SERIES: FINAL CHAPTER
           </span>
           <h2 className="text-2xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
-            The Qazi's <br />
+            Sajid Wins <br />
             <span className="px-2 py-0.5 bg-[#FF3B30] text-white border-2 border-black inline-block transform rotate-1 shadow-[2px_2px_0px_#000] rounded">
-              Verdict
+              The Case
             </span>
           </h2>
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            The Qazi examines page 24. Since the scribble matches Hamza's license record, the court rules: <strong>THE SIGNATURE IS BINDING. PAY UP, HAMZA!</strong> Hamza is declared liable for damages.
+            The Qazi reviews all contract documentation and matching signatures. The court declares a final judgment: <strong>SAJID WINS!</strong> Hamza is held fully liable for breach of contract and ordered to pay back the deposit and damages.
           </p>
           <div className="p-3 border-2 border-black bg-[#181922] rounded text-[10px] font-mono text-gray-300">
-            💡 <strong>The Cybersecurity Lesson:</strong> Traditional ink binds you, but if Hamza signed a digital Word doc with a fake PNG image, the proof is easily forgeable. We need math to ensure integrity!
+            💡 <strong>The Cybersecurity Lesson:</strong> Wet ink signatures are legally binding, but easily forgeable or repudiable on digital documents. We need mathematical digital signatures to ensure absolute trust.
           </div>
         </div>
 
         {/* Visual Graphic - Gavel Court Image */}
         <div className="col-span-1 md:col-span-6">
           <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[270px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">COURTROOM DECREE</span>
+            <span className="text-[9px] font-mono text-gray-500 uppercase">COURTROOM VICTORY</span>
 
-            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center">
+            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
               <img
-                src="/gavel_court.png"
-                alt="Gavel Court"
-                className="w-full h-full object-cover"
+                src="/sajids_wins_the_case.png"
+                alt="Sajid wins the case and celebrates courtroom victory"
+                className="w-full h-full object-cover animate-fade-in"
               />
             </div>
 
-            <span className="text-[9px] font-mono text-[#FF3B30] font-black uppercase">
-              ⚖️ VERDICT: QAZI DECLARES HAMZA LIABLE
+            <span className="text-[9px] font-mono text-[#34C759] font-black uppercase">
+              ⚖️ VERDICT: SAJID WINS THE LAWSUIT
             </span>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Section3Hamza5({ onNext }) {
       {/* Footer bar */}
       <div className="flex justify-between items-center border-t-2 border-black pt-2 mt-2">
         <span className="text-[10px] font-mono text-gray-500">
-          The story has concluded. Tap next to analyze traditional signature vulnerability failures.
+          Sajid has won the case. Tap next to analyze traditional signature vulnerability failures.
         </span>
         <button
           onClick={onNext}
