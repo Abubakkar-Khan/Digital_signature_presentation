@@ -2,7 +2,7 @@
 
 import { ShieldCheck } from "lucide-react";
 
-export default function Navbar({ currentSlide, goToSlide, total = 30 }) {
+export default function Navbar({ currentSlide, goToSlide, total = 31 }) {
   const scrollProgress = (currentSlide / total) * 100;
 
   const navItems = [
@@ -11,9 +11,9 @@ export default function Navbar({ currentSlide, goToSlide, total = 30 }) {
     { label: "Existence",  categoryId: "existence",  slideIndex: 8  },
     { label: "Process",    categoryId: "process",    slideIndex: 10 },
     { label: "Hash",       categoryId: "hash",       slideIndex: 11 },
-    { label: "2^256",      categoryId: "scale",      slideIndex: 14 },
-    { label: "Encryption", categoryId: "encryption", slideIndex: 22 },
-    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 29 },
+    { label: "2^256",      categoryId: "scale",      slideIndex: 15 },
+    { label: "Encryption", categoryId: "encryption", slideIndex: 23 },
+    { label: "DocDroc",    categoryId: "blueprint",  slideIndex: 30 },
   ];
 
   const getActiveCategory = () => {
@@ -21,9 +21,9 @@ export default function Navbar({ currentSlide, goToSlide, total = 30 }) {
     if (currentSlide >= 3  && currentSlide <= 7)        return "story";
     if (currentSlide >= 8  && currentSlide <= 9)        return "existence";
     if (currentSlide === 10)                            return "process";
-    if (currentSlide >= 11 && currentSlide <= 13)       return "hash";
-    if (currentSlide >= 14 && currentSlide <= 21)       return "scale";
-    if (currentSlide >= 22 && currentSlide <= 28)       return "encryption";
+    if (currentSlide >= 11 && currentSlide <= 14)       return "hash";
+    if (currentSlide >= 15 && currentSlide <= 22)       return "scale";
+    if (currentSlide >= 23 && currentSlide <= 29)       return "encryption";
     return "blueprint";
   };
 

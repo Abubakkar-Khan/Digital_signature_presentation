@@ -21,17 +21,6 @@ export default function Section14Closing({ onRestart }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Award className="w-4 h-4 text-[#34C759]" />
-          <span>[ SESSION_CLOSE: CELEBRATION ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 30 / 30
-        </span>
-      </div>
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center items-center text-center my-auto max-w-4xl mx-auto w-full">
         <span className="px-3 py-1 bg-[#34C759] text-black text-[10px] font-mono font-black uppercase tracking-widest border-2 border-black rounded mb-4 transform -rotate-1 shadow-[2px_2px_0px_#000]">

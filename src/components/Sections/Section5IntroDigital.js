@@ -33,7 +33,7 @@ export default function Section5IntroDigital({ onNext }) {
       title: "4. The Public Key",
       desc: "A shareable public key. Anyone can use it to decrypt/verify the signature and check if the document matches the hash.",
       color: "var(--swiss-yellow)",
-      meme: "Bob uses Alice's public key to verify that Alice was indeed the signer."
+      meme: "Sajid uses Hamza's public key to verify that Hamza was indeed the signer."
     }
   ];
 
@@ -46,7 +46,7 @@ export default function Section5IntroDigital({ onNext }) {
           <span>[ CHAPTER 04: INTRODUCING THE DIGITAL PROTOCOL ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 06 / 16
+          SLIDE 06 / 31
         </span>
       </div>
 

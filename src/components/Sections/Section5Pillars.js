@@ -32,17 +32,6 @@ export default function Section5Pillars({ onNext }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Shield className="w-4 h-4 text-[var(--swiss-red)]" />
-          <span>[ CHAPTER 08: DIGITAL SIGNATURE EXISTENCE ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 09 / 30
-        </span>
-      </div>
-
       {/* Main Content Grid */}
       <div className="flex-1 flex flex-col justify-center my-auto overflow-hidden">
         <div className="text-center mb-4">

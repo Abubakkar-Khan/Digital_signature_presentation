@@ -10,32 +10,32 @@ export default function Section11Process({ onNext }) {
     {
       title: "1. Hash the Document",
       subtitle: "PREPARE FINGERPRINT",
-      desc: "Alice takes the document payload (e.g. contract.docx) and passes it through SHA-256. This outputs a 256-bit unique hash. Alice cannot encrypt the entire document directly since it's too big, so hashing first makes it super fast.",
+      desc: "Hamza takes the document payload (e.g. contract.docx) and passes it through SHA-256. This outputs a 256-bit unique hash. Hamza cannot encrypt the entire document directly since it's too big, so hashing first makes it super fast.",
       doodle: `   📃 Doc ➔ [SHA-256] ➔ ⚙️ Hash (e3b0c4...)`
     },
     {
       title: "2. Sign the Hash",
       subtitle: "ENCRYPT WITH PRIVATE KEY",
-      desc: "Alice encrypts/signs the 256-bit hash using her Private Key. This outputs a encrypted byte string called the Digital Signature. Alice attaches this signature to the document.",
+      desc: "Hamza encrypts/signs the 256-bit hash using his Private Key. This outputs an encrypted byte string called the Digital Signature. Hamza attaches this signature to the document.",
       doodle: `   ⚙️ Hash + 🔑 Private Key ➔ ✍️ Signature`
     },
     {
       title: "3. Transmit",
       subtitle: "SEND THE BUNDLE",
-      desc: "Alice sends the original document and the Digital Signature to Bob over the network. Anyone can read the document, but nobody can alter it without breaking the math.",
-      doodle: `   [Alice] ➔ 📦 Bundle (Doc + Sig) ➔ [Bob]`
+      desc: "Hamza sends the original document and the Digital Signature to Sajid over the network. Anyone can read the document, but nobody can alter it without breaking the math.",
+      doodle: `   [Hamza] ➔ 📦 Bundle (Doc + Sig) ➔ [Sajid]`
     },
     {
       title: "4. Decrypt & Verify",
       subtitle: "PUBLIC KEY VALIDATION",
-      desc: "Bob receives the bundle. Bob takes Alice's Public Key and decrypts the Digital Signature. This yields the original hash Alice calculated at Step 1.",
-      doodle: `   ✍️ Signature + 🔓 Public Key ➔ ⚙️ Alice's Hash`
+      desc: "Sajid receives the bundle. Sajid takes Hamza's Public Key and decrypts the Digital Signature. This yields the original hash Hamza calculated at Step 1.",
+      doodle: `   ✍️ Signature + 🔓 Public Key ➔ ⚙️ Hamza's Hash`
     },
     {
       title: "5. The Match Test",
       subtitle: "INTEGRITY COMPARISON",
-      desc: "Bob calculates the SHA-256 hash of the received document himself. He compares his calculated hash with Alice's decrypted hash. If they match 100%, the document is untampered. If they don't, Bob throws it in the trash.",
-      doodle: `   ⚙️ Alice's Hash == ⚙️ Bob's Hash ?
+      desc: "Sajid calculates the SHA-256 hash of the received document himself. He compares his calculated hash with Hamza's decrypted hash. If they match 100%, the document is untampered. If they don't, Sajid throws it in the trash.",
+      doodle: `   ⚙️ Hamza's Hash == ⚙️ Sajid's Hash ?
    ✅ MATCH ➔ SAFE   ❌ NO MATCH ➔ FRAUD`
     }
   ];
@@ -49,7 +49,7 @@ export default function Section11Process({ onNext }) {
           <span>[ CHAPTER 10: THE CRYPTOGRAPHIC PIPELINE WORKFLOW ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 22 / 26
+          SLIDE 22 / 31
         </span>
       </div>
 

@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { ShieldCheck, ArrowRight, FileText, Key, Lock, CheckCircle, XCircle } from "lucide-react";
 
 const STEPS = [
-  { id: 0, from: "sender", label: "1. Hash Document", icon: FileText, color: "#FFCC00", desc: "Alice feeds the .docx into SHA-256 → unique 256-bit fingerprint" },
-  { id: 1, from: "sender", label: "2. Sign Hash", icon: Key, color: "#FF3B30", desc: "Alice encrypts the hash with her Private Key → Digital Signature" },
-  { id: 2, from: "both",   label: "3. Transmit Bundle", icon: ArrowRight, color: "#007AFF", desc: "Original doc + Signature sent over the network to Bob" },
-  { id: 3, from: "receiver", label: "4. Decrypt Signature", icon: Lock, color: "#AF52DE", desc: "Bob decrypts the signature with Alice's Public Key → recovers Alice's hash" },
-  { id: 4, from: "receiver", label: "5. Re-Hash & Compare", icon: CheckCircle, color: "#34C759", desc: "Bob hashes the received doc himself. If hashes match → VERIFIED ✅" },
+  { id: 0, from: "sender", label: "1. Hash Document", icon: FileText, color: "#FFCC00", desc: "Hamza feeds the .docx into SHA-256 → unique 256-bit fingerprint" },
+  { id: 1, from: "sender", label: "2. Sign Hash", icon: Key, color: "#FF3B30", desc: "Hamza encrypts the hash with his Private Key → Digital Signature" },
+  { id: 2, from: "both",   label: "3. Transmit Bundle", icon: ArrowRight, color: "#007AFF", desc: "Original doc + Signature sent over the network to Sajid" },
+  { id: 3, from: "receiver", label: "4. Decrypt Signature", icon: Lock, color: "#AF52DE", desc: "Sajid decrypts the signature with Hamza's Public Key → recovers Hamza's hash" },
+  { id: 4, from: "receiver", label: "5. Re-Hash & Compare", icon: CheckCircle, color: "#34C759", desc: "Sajid hashes the received doc himself. If hashes match → VERIFIED ✅" },
 ];
 
 export default function SectionProcessAnimated({ onNext }) {
@@ -39,17 +39,6 @@ export default function SectionProcessAnimated({ onNext }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-8 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-4">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <ShieldCheck className="w-4 h-4 text-[#34C759]" />
-          <span>[ CHAPTER 09: HOW DIGITAL SIGNATURES WORK ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 10 / 30
-        </span>
-      </div>
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col justify-center gap-6 overflow-hidden">
 
@@ -75,12 +64,12 @@ export default function SectionProcessAnimated({ onNext }) {
         {/* Two Entity Animation Panel */}
         <div className="relative flex items-stretch gap-4">
 
-          {/* ALICE — Sender */}
+          {/* HAMZA — Sender */}
           <div className={`flex flex-col items-center justify-center gap-3 w-44 shrink-0 p-4 border-2 border-black rounded-lg transition-all duration-300 ${
             step.from === "sender" || step.from === "both" ? "bg-[#1a1f2e] border-[#FFCC00]" : "bg-[#0E0F12] border-black"
           }`}>
             <div className="text-4xl">👩‍💻</div>
-            <span className="text-xs font-space font-black text-white uppercase">ALICE</span>
+            <span className="text-xs font-space font-black text-white uppercase">HAMZA</span>
             <span className="text-[8px] font-mono text-gray-500 uppercase">Sender / Signer</span>
             {(step.from === "sender" || step.from === "both") && (
               <span className="text-[8px] font-mono text-[#FFCC00] font-black uppercase animate-pulse">● ACTIVE</span>
@@ -108,9 +97,9 @@ export default function SectionProcessAnimated({ onNext }) {
             {/* Transmission arrow */}
             {step.from === "both" && (
               <div className="flex items-center gap-2 font-mono text-[10px] text-[#007AFF] animate-pulse">
-                <span>ALICE</span>
+                <span>HAMZA</span>
                 <ArrowRight className="w-4 h-4" />
-                <span>BOB</span>
+                <span>SAJID</span>
               </div>
             )}
 
@@ -125,12 +114,12 @@ export default function SectionProcessAnimated({ onNext }) {
             )}
           </div>
 
-          {/* BOB — Receiver */}
+          {/* SAJID — Receiver */}
           <div className={`flex flex-col items-center justify-center gap-3 w-44 shrink-0 p-4 border-2 border-black rounded-lg transition-all duration-300 ${
             step.from === "receiver" || step.from === "both" ? "bg-[#1a2a1f] border-[#34C759]" : "bg-[#0E0F12] border-black"
           }`}>
             <div className="text-4xl">👨‍💻</div>
-            <span className="text-xs font-space font-black text-white uppercase">BOB</span>
+            <span className="text-xs font-space font-black text-white uppercase">SAJID</span>
             <span className="text-[8px] font-mono text-gray-500 uppercase">Receiver / Verifier</span>
             {(step.from === "receiver" || step.from === "both") && (
               <span className="text-[8px] font-mono text-[#34C759] font-black uppercase animate-pulse">● ACTIVE</span>

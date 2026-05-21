@@ -21,6 +21,7 @@ import SectionProcessAnimated from "@/components/Sections/SectionProcessAnimated
 import SectionHashTitle from "@/components/Sections/SectionHashTitle";
 import SectionHashDefinition from "@/components/Sections/SectionHashDefinition";
 import Section6HashExplain from "@/components/Sections/Section6HashExplain";
+import Section7ShaDeep from "@/components/Sections/Section7ShaDeep";
 
 // 2^256 Scale
 import Section8Huge1 from "@/components/Sections/Section8Huge1";
@@ -48,7 +49,7 @@ import Section13DocDroc from "@/components/Sections/Section13DocDroc";
 import Section14Closing from "@/components/Sections/Section14Closing";
 
 export default function Home() {
-  const TOTAL = 30;
+  const TOTAL = 31;
   const [currentSlide, setCurrentSlide] = useState(1);
 
   // Blur focused elements when slide changes to prevent keyboard hijacking
@@ -107,31 +108,32 @@ export default function Home() {
       case 11: return <SectionHashTitle          onNext={next} />;
       case 12: return <SectionHashDefinition     onNext={next} />;
       case 13: return <Section6HashExplain       onNext={next} />;
+      case 14: return <Section7ShaDeep           onNext={next} />;
 
       // ── 2^256 Scale (Interactive Zoom Simulator) ──────────────────
-      case 14: return <Section8Huge1             onNext={next} goToSlide={setCurrentSlide} />;
-      case 15: return <Section8Huge2             onNext={next} goToSlide={setCurrentSlide} />;
-      case 16: return <Section8Huge3             onNext={next} goToSlide={setCurrentSlide} />;
-      case 17: return <Section8Huge4             onNext={next} goToSlide={setCurrentSlide} />;
-      case 18: return <Section8Huge5             onNext={next} goToSlide={setCurrentSlide} />;
-      case 19: return <Section8Huge6             onNext={next} goToSlide={setCurrentSlide} />;
-      case 20: return <Section8Huge7             onNext={next} goToSlide={setCurrentSlide} />;
-      case 21: return <Section8Huge8             onNext={next} goToSlide={setCurrentSlide} />;
+      case 15: return <Section8Huge1             onNext={next} goToSlide={setCurrentSlide} />;
+      case 16: return <Section8Huge2             onNext={next} goToSlide={setCurrentSlide} />;
+      case 17: return <Section8Huge3             onNext={next} goToSlide={setCurrentSlide} />;
+      case 18: return <Section8Huge4             onNext={next} goToSlide={setCurrentSlide} />;
+      case 19: return <Section8Huge5             onNext={next} goToSlide={setCurrentSlide} />;
+      case 20: return <Section8Huge6             onNext={next} goToSlide={setCurrentSlide} />;
+      case 21: return <Section8Huge7             onNext={next} goToSlide={setCurrentSlide} />;
+      case 22: return <Section8Huge8             onNext={next} goToSlide={setCurrentSlide} />;
 
       // ── Encryption ────────────────────────────────────────────────
-      case 22: return <SectionEncryptionTitle      onNext={next} />;
-      case 23: return <SectionEncryptionDefinition onNext={next} />;
-      case 24: return <Section9Steganography       onNext={next} />;
-      case 25: return <Section9Caesar              onNext={next} />;
-      case 26: return <Section10Modern             onNext={next} />;
+      case 23: return <SectionEncryptionTitle      onNext={next} />;
+      case 24: return <SectionEncryptionDefinition onNext={next} />;
+      case 25: return <Section9Steganography       onNext={next} />;
+      case 26: return <Section9Caesar              onNext={next} />;
+      case 27: return <Section10Modern             onNext={next} />;
 
       // ── Asymmetric Math & Rationale ───────────────────────────────
-      case 27: return <SectionEncryptionRSA        onNext={next} />;
-      case 28: return <SectionRSAWhyHash           onNext={next} />;
+      case 28: return <SectionEncryptionRSA        onNext={next} />;
+      case 29: return <SectionRSAWhyHash           onNext={next} />;
 
       // ── Endgame ───────────────────────────────────────────────────
-      case 29: return <Section13DocDroc            onNext={next} />;
-      case 30: return <Section14Closing            onRestart={restart} />;
+      case 30: return <Section13DocDroc            onNext={next} />;
+      case 31: return <Section14Closing            onRestart={restart} />;
 
       default: return <Section1Hero onNext={next} />;
     }

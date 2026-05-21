@@ -38,17 +38,6 @@ export default function Section4Problems({ onNext }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-6 md:p-12 swiss-grid relative">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-[3px] border-black pb-4">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <ShieldAlert className="w-4 h-4 text-[#FF3B30]" />
-          <span>[ CHAPTER 03: TRADITIONAL SIGNATURE FAILURE MODES ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 08 / 30
-        </span>
-      </div>
-
       {/* Main Grid */}
       <div className="flex-1 flex flex-col justify-center my-6 max-w-5xl mx-auto w-full">
         <div className="text-center mb-8">

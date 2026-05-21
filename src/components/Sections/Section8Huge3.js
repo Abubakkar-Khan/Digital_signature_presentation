@@ -6,17 +6,6 @@ import KeyspaceZoomSimulator from "../KeyspaceZoomSimulator";
 export default function Section8Huge3({ onNext, goToSlide }) {
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Star className="w-4 h-4 text-[#FF3B30]" />
-          <span>[ THE SCALE OF 2^256: LAYER 3 - THE PLANETARY LEVEL ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 16 / 30
-        </span>
-      </div>
-
       {/* Main Grid */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto overflow-hidden">
         <div className="col-span-1 md:col-span-6 flex flex-col justify-center">

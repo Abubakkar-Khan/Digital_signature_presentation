@@ -8,9 +8,9 @@ export default function Section12Future({ onNext }) {
       title: "Blockchain Signatures",
       tech: "SMART CONTRACTS",
       desc: "Signatures recorded in decentralized Ledgers. Multi-sig approvals prevent any single employee from stealing the corporate treasury.",
-      meme: "If Alice and Bob don't both sign, the fund stays locked. No trust needed.",
+      meme: "If Hamza and Sajid don't both sign, the fund stays locked. No trust needed.",
       color: "var(--swiss-red)",
-      ascii: `   [Alice ✍️] + [Bob ✍️]
+      ascii: `   [Hamza ✍️] + [Sajid ✍️]
            ▼
      [RELEASE FUNDS]`
     },
@@ -45,7 +45,7 @@ export default function Section12Future({ onNext }) {
           <span>[ CHAPTER 11: FUTURE HORIZONS OF CRYPTOGRAPHY ]</span>
         </div>
         <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 15 / 16
+          SLIDE 15 / 31
         </span>
       </div>
 

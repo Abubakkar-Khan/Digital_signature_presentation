@@ -8,17 +8,6 @@ export default function Section10Modern({ onNext }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Key className="w-4 h-4 text-[#007AFF]" />
-          <span>[ CHAPTER 18: DEFINING MODERN ENCRYPTION ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 24 / 27
-        </span>
-      </div>
-
       {/* Main Content Grid */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-6 items-center my-auto overflow-hidden">
         {/* Left Side: Explanation */}
@@ -64,7 +53,7 @@ export default function Section10Modern({ onNext }) {
           <div className={`doodle-card p-4 ${activeTab === "symmetric" ? "border-[#FF3B30]" : "border-[#34C759]"}`}>
             <div className="flex items-center justify-between pb-2 border-b border-black mb-3">
               <span className="text-[9px] font-mono text-gray-400 uppercase">
-                ALICE & BOB KEY EXCHANGE SYSTEM
+                HAMZA & SAJID KEY EXCHANGE SYSTEM
               </span>
               <span className={`text-[9px] font-mono font-black uppercase ${activeTab === "symmetric" ? "text-[#FF3B30]" : "text-[#34C759]"}`}>
                 {activeTab === "symmetric" ? "[ SHARED PASSWORD ]" : "[ MATHEMATICAL KEYPAIR ]"}
@@ -76,9 +65,9 @@ export default function Section10Modern({ onNext }) {
               {activeTab === "symmetric" ? (
                 <div className="text-center space-y-2">
                   <div className="flex justify-center gap-4 text-xs font-mono">
-                    <span className="text-gray-300">🔓 Alice</span>
+                    <span className="text-gray-300">🔓 Hamza</span>
                     <span className="text-[#FF3B30]">🔑 (Same Key)</span>
-                    <span className="text-gray-300">Bob 🔒</span>
+                    <span className="text-gray-300">Sajid 🔒</span>
                   </div>
                   <p className="text-[9px] font-mono text-red-500 font-bold max-w-[320px] mx-auto">
                     ⚠️ DANGER: If Eve intercepts the single key during exchange, she can read all communication.
@@ -87,12 +76,12 @@ export default function Section10Modern({ onNext }) {
               ) : (
                 <div className="text-center space-y-2">
                   <div className="flex justify-center gap-4 text-xs font-mono">
-                    <span className="text-gray-300">🔓 Public Key (Bob)</span>
+                    <span className="text-gray-300">🔓 Public Key (Sajid)</span>
                     <span className="text-[#34C759]">➔</span>
-                    <span className="text-gray-300">Private Key (Bob) 🔑</span>
+                    <span className="text-gray-300">Private Key (Sajid) 🔑</span>
                   </div>
                   <p className="text-[9px] font-mono text-green-500 font-bold max-w-[320px] mx-auto">
-                    🛡️ SECURE: Anyone can encrypt using Bob's public key. But only Bob's secret private key can decrypt.
+                    🛡️ SECURE: Anyone can encrypt using Sajid's public key. But only Sajid's secret private key can decrypt.
                   </p>
                 </div>
               )}

@@ -36,17 +36,6 @@ const properties = [
 export default function SectionHashDefinition({ onNext }) {
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-8 swiss-grid relative overflow-hidden">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-4">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <Hash className="w-4 h-4 text-[#34C759]" />
-          <span>[ CHAPTER 10: WHAT IS A CRYPTOGRAPHIC HASH? ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 12 / 30
-        </span>
-      </div>
-
       {/* Main Content */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-6 items-start overflow-hidden">
 

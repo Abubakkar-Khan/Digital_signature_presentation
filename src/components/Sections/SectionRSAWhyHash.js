@@ -23,17 +23,6 @@ export default function SectionRSAWhyHash({ onNext }) {
 
   return (
     <div className="w-full h-full flex flex-col justify-between p-4 md:p-6 swiss-grid relative overflow-hidden bg-[#0A0B0D]">
-      {/* Slide Header */}
-      <div className="flex justify-between items-baseline border-b-2 border-black pb-2 mb-2">
-        <div className="flex items-center gap-2 font-mono text-xs font-bold text-gray-400">
-          <ShieldAlert className="w-4 h-4 text-[#FFCC00]" />
-          <span>[ CHAPTER 11: KEY RATIONALE - WHY DO WE HASH BEFORE SIGNING? ]</span>
-        </div>
-        <span className="swiss-badge text-[10px] border-2 border-black">
-          SLIDE 28 / 30
-        </span>
-      </div>
-
       {/* Main Grid */}
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-5 items-center my-auto overflow-hidden">
         
