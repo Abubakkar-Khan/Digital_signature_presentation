@@ -37,11 +37,11 @@ export default function Section3Hamza2({ onNext }) {
         </div>
 
         {/* Visual Graphic */}
-        <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#007AFF] text-center min-h-[270px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">HAMZA'S VILLAGE RETREAT</span>
+        <div className="col-span-1 md:col-span-6 flex justify-center">
+          <div className="doodle-card p-4 border-[#007AFF] text-center w-full max-w-[360px] flex flex-col justify-between items-center">
+            <span className="text-[9px] font-mono text-gray-500 uppercase mb-2">HAMZA'S VILLAGE RETREAT</span>
 
-            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
+            <div className="relative w-full aspect-square rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
               <img
                 src="/hamza sleeping.png"
                 alt="Hamza sleeping peacefully in his village"
@@ -49,7 +49,7 @@ export default function Section3Hamza2({ onNext }) {
               />
             </div>
 
-            <span className="text-[9px] font-mono text-gray-400 italic">
+            <span className="text-[9px] font-mono text-gray-400 italic mt-1">
               "Deadlines? Code dashboards? Zzz... let me sleep..."
             </span>
           </div>

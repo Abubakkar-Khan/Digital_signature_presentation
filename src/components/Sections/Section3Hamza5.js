@@ -37,11 +37,11 @@ export default function Section3Hamza5({ onNext }) {
         </div>
 
         {/* Visual Graphic - Gavel Court Image */}
-        <div className="col-span-1 md:col-span-6">
-          <div className="doodle-card p-4 border-[#FF3B30] text-center min-h-[270px] flex flex-col justify-between items-center">
-            <span className="text-[9px] font-mono text-gray-500 uppercase">COURTROOM VICTORY</span>
+        <div className="col-span-1 md:col-span-6 flex justify-center">
+          <div className="doodle-card p-4 border-[#FF3B30] text-center w-full max-w-[360px] flex flex-col justify-between items-center">
+            <span className="text-[9px] font-mono text-gray-500 uppercase mb-2">COURTROOM VICTORY</span>
 
-            <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
+            <div className="relative w-full aspect-square rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center mb-2 shadow-[2px_2px_0px_#000]">
               <img
                 src="/sajids_wins_the_case.png"
                 alt="Sajid wins the case and celebrates courtroom victory"
