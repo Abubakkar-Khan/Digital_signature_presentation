@@ -28,15 +28,15 @@ export default function Section14Closing({ onRestart }) {
         </span>
 
         <h2 className="text-3xl md:text-6xl font-space font-black uppercase text-white leading-none mb-6">
-          Implementing a <br />
+          You Are Now a <br />
           <span className="px-4 py-1 bg-[#FF3B30] text-white border-3 border-black inline-block transform rotate-1 shadow-[4px_4px_0px_#000] rounded">
-            Digital Signature
+            Digital Trust
           </span> <br />
-          on Word doc
+          Expert! 🎓
         </h2>
 
         <p className="text-gray-400 font-mono text-xs max-w-xl leading-relaxed mb-6">
-          Thank you for following the journey from Hamza's breach of contract to the absolute mathematical certainty of asymmetric keys and cryptographic hash verification!
+          You've traveled from the simple vulnerability of paper ink scribbles to the absolute mathematical power of cryptographic signatures. Now you know exactly how the digital world guarantees trust, one block at a time!
         </p>
 
         {/* Large visual card with buttons */}

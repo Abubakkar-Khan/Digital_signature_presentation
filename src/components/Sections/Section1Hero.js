@@ -20,24 +20,24 @@ export default function Section1Hero({ onNext }) {
 
           {/* Large Swiss Header */}
           <h1 className="text-3xl md:text-5xl font-space font-black tracking-tight leading-[1.0] text-white uppercase mb-6">
-            Implementing a <br />
+            How to Sign <br />
             <span className="px-3 bg-[#FF3B30] text-white border-[3px] border-black inline-block transform -rotate-1 shadow-[4px_4px_0px_#000] rounded">
-              Digital Signature
+              Things Online
             </span> <br />
-            on Word doc
+            Without Getting Scammed
           </h1>
 
           <p className="text-gray-400 font-mono text-xs leading-relaxed mb-8 max-w-lg border-l-4 border-[#007AFF] pl-4 py-1.5">
-            How does math solve the classic developer dilemma: "Trust me bro, this file is safe"? Let's understand cryptographic hashing, asymmetric key signing, and document verification using sketches and memes.
+            How does mathematics solve our digital trust issues? Discover how cryptographic signatures protect your files from scammers and forgers, explained with simple stories and interactive visuals.
           </p>
 
           {/* Doodly Dialog Bubble */}
           <div className="p-4 rounded-xl border-3 border-black bg-[#181922] max-w-md shadow-[4px_4px_0px_#007AFF] border-radius-custom relative">
             <div className="absolute -top-3 left-4 px-2 bg-[#007AFF] text-white text-[9px] font-mono border-2 border-black uppercase">
-              Developer Joke
+              The Copy-Paste Illusion
             </div>
             <p className="text-xs text-gray-300 font-mono italic mt-1">
-              "We don't need digital signatures. I just pasted my scribble.png in Microsoft Word. It's secure because my cursor is glowing."
+              "I just copy-pasted my handwritten signature image into Microsoft Word. It's totally safe because my cursor is glowing, right?"
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function Section1Hero({ onNext }) {
         {/* Large Flat Visual Image Card */}
         <div className="w-full md:w-[320px] p-4 doodle-card-blue text-center flex flex-col items-center justify-between shrink-0 h-[280px]">
           <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest block mb-2">
-            [ VERIFICATION CORE ]
+            [ MATHEMATICAL SEAL ]
           </span>
           <div className="relative w-full h-[180px] rounded-lg border-2 border-black overflow-hidden bg-black flex items-center justify-center">
             <img

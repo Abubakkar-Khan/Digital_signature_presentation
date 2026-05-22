@@ -6,14 +6,14 @@ export default function Section7ShaDeep({ onNext }) {
       {/* Centered Main Content */}
       <div className="flex-1 flex flex-col justify-center items-center text-center max-w-4xl mx-auto my-auto space-y-6">
         <h2 className="text-3xl md:text-6xl font-space font-black uppercase text-white leading-none tracking-tight">
-          How Big is <br />
+          How Secure is <br />
           <span className="px-4 py-2 bg-[#FF3B30] text-white border-[3px] border-black inline-block transform -rotate-1 shadow-[5px_5px_0px_#000] rounded mt-2">
             SHA-256?
           </span>
         </h2>
         
         <p className="text-gray-400 font-mono text-xs md:text-sm leading-relaxed max-w-xl">
-          To grasp the absolute security of digital signatures, we must understand the colossal scale of the SHA-256 key space.
+          To grasp the absolute security of digital signatures, we must understand the colossal scale of SHA-256. Guessing a hash is harder than finding a specific grain of sand on all the beaches of the world, multiplied by the number of stars in the sky.
         </p>
 
         {/* Mathematical Breakdown Card */}

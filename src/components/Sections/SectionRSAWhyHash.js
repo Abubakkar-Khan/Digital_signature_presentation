@@ -39,7 +39,7 @@ export default function SectionRSAWhyHash({ onNext }) {
               </span>
             </h2>
             <p className="text-gray-400 font-mono text-[10px] leading-relaxed">
-              If asymmetric encryption provides security, it seems intuitive to encrypt the entire document with our private key to sign it. Here is why doing that is a catastrophic design mistake:
+              If asymmetric encryption provides security, it seems intuitive to encrypt the entire document with our private key to sign it. But doing so is like wrapping an entire cargo shipping container in solid titanium instead of placing a simple, unbroken metal security seal on the latch:
             </p>
           </div>
 
@@ -49,9 +49,9 @@ export default function SectionRSAWhyHash({ onNext }) {
             <div className="p-2 border border-gray-800 bg-[#13141C] rounded flex gap-2">
               <Cpu className="w-4 h-4 text-[#FF3B30] shrink-0" />
               <div>
-                <strong className="text-white uppercase">1. Asymmetric Math is Slow</strong>
+                <strong className="text-white uppercase">1. Asymmetric Math is Too Slow</strong>
                 <p className="text-gray-400 text-[8.5px] mt-0.5">
-                  RSA uses complex modular exponentiation of huge numbers. Hashing is **1,000x faster**. Encrypting a 10MB document directly would freeze your computer.
+                  RSA uses complex exponents of huge numbers. Hashing is **1,000x faster**. Encrypting a 10MB document directly would freeze your computer, whereas hashing is instant.
                 </p>
               </div>
             </div>
@@ -60,9 +60,9 @@ export default function SectionRSAWhyHash({ onNext }) {
             <div className="p-2 border border-gray-800 bg-[#13141C] rounded flex gap-2">
               <ShieldAlert className="w-4 h-4 text-[#FFCC00] shrink-0" />
               <div>
-                <strong className="text-white uppercase">2. Strict Size Limits</strong>
+                <strong className="text-white uppercase">2. Tiny Size Restrictions</strong>
                 <p className="text-gray-400 text-[8.5px] mt-0.5">
-                  An RSA 2048-bit key can only encrypt a max of **245 bytes** of data at a time! To encrypt a large file, it has to be split into thousands of blocks, compounding the latency.
+                  Standard asymmetric keys can only encrypt a tiny amount of data (under **245 bytes**) at once. Larger documents must be painstakingly chopped into thousands of pieces, locking up the CPU.
                 </p>
               </div>
             </div>
@@ -71,9 +71,9 @@ export default function SectionRSAWhyHash({ onNext }) {
             <div className="p-2 border border-gray-800 bg-[#13141C] rounded flex gap-2">
               <FileText className="w-4 h-4 text-[#007AFF] shrink-0" />
               <div>
-                <strong className="text-white uppercase">3. Signature Bloat</strong>
+                <strong className="text-white uppercase">3. Files Grow Double in Size</strong>
                 <p className="text-gray-400 text-[8.5px] mt-0.5">
-                  Encrypting a whole document creates a ciphertext that is **equal to or larger than** the original document. Your file size doubles! Hashing first makes signature size constant.
+                  Encrypting a whole document creates a file that is equal to or larger than the original document. Your final document package doubles in size! Signing just the small hash fingerprint keeps signatures tiny and instant.
                 </p>
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function SectionRSAWhyHash({ onNext }) {
 
             {/* Rationale conclusion box */}
             <div className="mt-3 p-2 bg-[#181922] border border-black rounded text-[9px] font-mono text-gray-400">
-              💡 <strong>The Cryptographic Standard:</strong> By hashing the document first, we reduce any size file to a small, fixed **32-byte digest (SHA-256)**. Then we only encrypt that tiny digest. The math signature is small, computation is instant, and security is perfect.
+              💡 <strong>The Wax Seal Metaphor:</strong> Hashing the document first is like taking a large crate, making a tiny unique wax impression of its contents, and signing just the wax seal. If anyone changes the contents of the crate, the wax seal no longer matches! It makes signing instant, files small, and verification perfect.
             </div>
           </div>
         </div>

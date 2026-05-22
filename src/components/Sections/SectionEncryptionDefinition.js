@@ -19,8 +19,8 @@ export default function SectionEncryptionDefinition({ onNext }) {
               Encryption?
             </span>
           </h2>
-          <p className="text-gray-400 font-mono text-xs leading-relaxed mb-4">
-            Encryption is the fundamental practice of converting <strong className="text-white">readable plaintext</strong> into <strong className="text-[#007AFF]">unreadable ciphertext</strong> using a mathematical key. Only parties holding the corresponding key can decrypt it back into plain, readable format.
+          <p className="text-gray-300 font-mono text-xs leading-relaxed mb-4">
+            Encryption is the practice of converting <strong className="text-white">readable text (plaintext)</strong> into an <strong className="text-[#007AFF]">unreadable secret code (ciphertext)</strong> using a mathematical key. Think of it like putting your message inside a high-security lockbox. Only people with the correct key can unlock it and read it.
           </p>
 
           {/* Vocabulary Box */}

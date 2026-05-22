@@ -17,7 +17,7 @@ export default function Section13DocDroc({ onNext }) {
           </h2>
           
           <p className="text-gray-400 font-mono text-[10px] leading-relaxed mb-4">
-            DocDroc is a standalone secure utility designed specifically for signing Microsoft Word documents. Instead of hashing random text, it parses the document's structure to create cryptographic seals.
+            DocDroc is your friendly, personal digital trust shield for signing Microsoft Word files. It takes the mystery out of cryptography by slicing open the document, extracting the text, applying a mathematical seal, and checking for tampering in one click.
           </p>
 
           <div className="space-y-2 font-mono text-[9px] text-gray-300">

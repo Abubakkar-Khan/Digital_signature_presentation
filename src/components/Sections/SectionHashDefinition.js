@@ -5,30 +5,30 @@ import { Hash, ShieldCheck, Fingerprint, RefreshCw, Zap } from "lucide-react";
 const properties = [
   {
     icon: Fingerprint,
-    title: "Deterministic",
+    title: "Always Identical (Deterministic)",
     color: "#FF3B30",
-    desc: "Same input ALWAYS produces the exact same hash. 'Hello' → same 64-char string every single time, on every machine, forever.",
+    desc: "The same input ALWAYS produces the exact same hash fingerprint. 'Hello' yields the same code on every computer in the universe, forever.",
     example: `"Hello" → e49b1be...`,
   },
   {
     icon: Zap,
-    title: "One-Way / Irreversible",
+    title: "One-Way Street (Irreversible)",
     color: "#FFCC00",
-    desc: "You can hash data in milliseconds, but you cannot reverse a hash back to the original. The function is a one-way street.",
+    desc: "It is instant to convert text into a hash, but mathematically impossible to reverse the hash back into the original text.",
     example: `a1b2c3... → ??? (impossible)`,
   },
   {
     icon: ShieldCheck,
-    title: "Avalanche Effect",
+    title: "The Butterfly Effect (Avalanche)",
     color: "#34C759",
-    desc: "Change a SINGLE character in the input and the ENTIRE output hash flips completely. No two similar inputs share a similar hash.",
+    desc: "Change a SINGLE letter or space in a 500-page document, and the resulting hash code flips completely. No two similar documents share a similar hash.",
     example: `"Hello" vs "hello" → 100% different`,
   },
   {
     icon: RefreshCw,
-    title: "Collision Resistant",
+    title: "Completely Unique (Collision Resistant)",
     color: "#007AFF",
-    desc: "Impossible to find two different inputs that produce the same hash output. SHA-256 has 2^256 possible outputs — essentially infinite.",
+    desc: "No two different documents can ever produce the exact same hash code. It is safer and more unique than matching DNA.",
     example: `A ≠ B  →  Hash(A) ≠ Hash(B)`,
   },
 ];
@@ -51,7 +51,7 @@ export default function SectionHashDefinition({ onNext }) {
             </span>
           </h2>
           <p className="text-gray-300 font-mono text-xs leading-relaxed mb-4">
-            A <strong className="text-white">hash function</strong> takes any input — a word, a sentence, an entire document — and converts it into a <strong className="text-[#34C759]">fixed-length string</strong> called a <strong className="text-white">digest</strong>. The output size is always exactly the same regardless of input size.
+            Think of a <strong className="text-white">hash function</strong> as a magic digital blender. You feed it a document (of any size!), and it blends it into a unique, <strong className="text-[#34C759]">fixed-length fingerprint code</strong> (a digest). The code represents the exact state of that file.
           </p>
 
           {/* Visual example box */}

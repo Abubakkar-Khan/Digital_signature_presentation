@@ -5,30 +5,30 @@ import { Copy, PenTool, ShieldAlert } from "lucide-react";
 export default function Section4Problems({ onNext }) {
   const problems = [
     {
-      title: "Forgery & Imitation",
+      title: "1. Tracing & Forgery",
       icon: PenTool,
       accent: "var(--swiss-red)",
-      desc: "Ink on paper is physical, not mathematical. A bad actor with a steady hand can copy, trace, or practice a handwritten scribble, signing a fake agreement on your behalf.",
+      desc: "Ink on paper is physical, not mathematical. A bad actor with a steady hand can copy or trace a handwritten scribble on a screen, signing a fake agreement on your behalf.",
       meme: "Hacker practicing your signature: *Squinting eyes, copying curves*",
       ascii: `     ✍️ (._. ) 
     [練習] [練習]
     "Looks close enough!"`
     },
     {
-      title: "Easy Duplication",
+      title: "2. The Copy-Paste Trick",
       icon: Copy,
       accent: "var(--swiss-yellow)",
-      desc: "In a computer file, a handwritten signature is just a collection of pixels (like signature.png). Anyone can crop it out of a PDF contract and paste it onto a $10,000 promissory note.",
+      desc: "On a computer, your signature is just a collection of pixels. Anyone can crop your signature.png from a PDF and paste it onto a $10,000 promissory note.",
       meme: "Scammer copies signature: 'Ctrl+C, Ctrl+V, now I own your house'",
       ascii: `   [Ctrl+C] ➔ 💾 ➔ [Ctrl+V]
    "Infinite wealth glitch
     unlocked! 🚀"`
     },
     {
-      title: "No Integrity Checks",
+      title: "3. The Text Swap",
       icon: ShieldAlert,
       accent: "var(--swiss-blue)",
-      desc: "If you paste a signature image into a Word document and send it, the receiver can edit the document text (e.g. changing delivery terms) *after* your signature was attached. There is no mathematical seal.",
+      desc: "If you paste a signature image into a Word document, anyone can edit the text afterwards (like changing a price from $100 to $1,000,000). The image will still sit there, completely unaware.",
       meme: "Contract values: changing $100 to $1,000,000 silently.",
       ascii: `  [ Before ]: Pay $100 📜✍️
   [ After  ]: Pay $100,000 📜✍️
@@ -42,13 +42,13 @@ export default function Section4Problems({ onNext }) {
       <div className="flex-1 flex flex-col justify-center my-6 max-w-5xl mx-auto w-full">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-space font-black uppercase text-white leading-none mb-3">
-            Why Scanned Images{" "}
+            Why Scanned Signature Images Are a{" "}
             <span className="px-3 bg-[#FF3B30] text-white border-[3px] border-black inline-block transform -rotate-1 shadow-[3px_3px_0px_#000] rounded">
-              Offer No Security
+              Security Illusion
             </span>
           </h2>
           <p className="text-xs font-mono text-gray-400 max-w-md mx-auto">
-            A screenshot of a scribble pasted into a Word document is NOT a digital signature. It's just a digital sticker.
+            A screenshot of a scribble pasted into a document is NOT a digital signature. It's just a digital sticker.
           </p>
         </div>
 

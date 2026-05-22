@@ -5,24 +5,24 @@ import { Shield } from "lucide-react";
 export default function Section5Pillars({ onNext }) {
   const pillars = [
     {
-      title: "1. Authentication",
-      desc: "Proves WHO signed the file. Only the holder of the private key could have generated the signature. No impersonators.",
+      title: "1. Who Signed It? (Authentication)",
+      desc: "Guarantees identity. Proves EXACTLY who signed the file. Only the real sender holding their secret key could have made it. No impersonators.",
       badge: "IDENTITY VERIFIED",
       color: "var(--swiss-red)",
       ascii: `   [ PRIVATE KEY ] ➔ ✍️ Signature
    "Only Hamza has this key."`
     },
     {
-      title: "2. Integrity",
-      desc: "Proves the file has NOT been edited. If even a single byte changes, the hash verification fails instantly.",
+      title: "2. Has It Been Edited? (Integrity)",
+      desc: "Zero tampering allowed. Proves the document hasn't been changed by even a single character. If a single comma is edited, the seal breaks instantly.",
       badge: "ZERO TAMPERING",
       color: "var(--swiss-yellow)",
       ascii: `   Doc ➔ [ SHA-256 ] ➔ Match OK?
    "Not a single bit altered."`
     },
     {
-      title: "3. Non-Repudiation",
-      desc: "Hamza cannot deny it. Once signed with his private key, Hamza cannot say 'it wasn't me' in court.",
+      title: "3. No Take-Backs! (Non-Repudiation)",
+      desc: "Legally binding. The signer cannot claim 'it wasn't me' or 'I was hacked' because the signature requires their unique mathematical key.",
       badge: "LEGAL BINDING",
       color: "var(--swiss-green)",
       ascii: `   [ Signature Check ] ➔ Gavel ⚖️
@@ -36,13 +36,13 @@ export default function Section5Pillars({ onNext }) {
       <div className="flex-1 flex flex-col justify-center my-auto overflow-hidden">
         <div className="text-center mb-4">
           <h2 className="text-2xl md:text-4xl font-space font-black uppercase text-white leading-none">
-            Digital Signature{" "}
+            The Three Rules of{" "}
             <span className="px-2 py-0.5 bg-[var(--swiss-red)] text-white border-2 border-black inline-block transform rotate-1 shadow-[2px_2px_0px_#000] rounded">
-              Existence
+              Absolute Trust
             </span>
           </h2>
           <p className="text-[10px] font-mono text-gray-400 mt-1.5">
-            Traditional signature files can be modified by anyone. Cybersecurity signatures exist based on three mathematically absolute foundations.
+            Traditional files can be modified by anyone. Secure digital signatures guarantee trust using three mathematically absolute pillars.
           </p>
         </div>
 

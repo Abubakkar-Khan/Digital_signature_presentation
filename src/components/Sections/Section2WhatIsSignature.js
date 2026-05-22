@@ -77,8 +77,8 @@ export default function Section2WhatIsSignature({ onNext }) {
             <div className="mt-4 p-3 bg-black border-2 border-black rounded-lg flex gap-2">
               <ShieldAlert className="w-5 h-5 text-[#FF3B30] shrink-0" />
               <div className="font-mono text-[9px] text-gray-300 leading-snug">
-                <strong className="text-[#FF3B30] uppercase block mb-0.5">The Analog Vulnerability:</strong>
-                A traditional ink signature is only physically bound to the <span className="text-white font-bold">paper sheet</span>, not the actual text. If a bad actor swaps the pages above the signature line, the signature remains physically unchanged. It has no mathematical awareness of the words it authorizes.
+                <strong className="text-[#FF3B30] uppercase block mb-0.5">The Paper Trap:</strong>
+                Your ink signature is physically glued to the <span className="text-white font-bold">paper sheet</span>, not to the actual words. Swap the pages above the signature line, and the signature remains unchanged. It has no mathematical awareness of the words it authorizes.
               </div>
             </div>
           </div>

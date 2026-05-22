@@ -8,7 +8,7 @@ export default function SectionHashTitle({ onNext }) {
       {/* Main Poster Block */}
       <div className="flex-1 flex flex-col justify-center items-center text-center my-auto">
         <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-4">
-          Part II: Cryptographic Hash Functions
+          Part II: The Cryptographic Hash (Digital Fingerprints)
         </span>
 
         <h1 className="text-5xl md:text-8xl font-space font-black uppercase text-white leading-none tracking-tighter mb-4">
@@ -19,7 +19,7 @@ export default function SectionHashTitle({ onNext }) {
         </h1>
 
         <p className="text-gray-400 font-mono text-xs max-w-md leading-relaxed mt-2">
-          Understanding the mathematical fingerprint that guarantees document integrity. If a single bit changes, the signature breaks.
+          Understanding the unique mathematical fingerprint that secures every document. If a single letter changes, the entire fingerprint flips, sounding the alarm!
         </p>
       </div>
 

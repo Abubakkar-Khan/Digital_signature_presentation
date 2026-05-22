@@ -98,7 +98,7 @@ export default function SectionEncryptionRSA({ onNext }) {
               </span>
             </h2>
             <p className="text-gray-400 font-mono text-[10px] leading-relaxed">
-              RSA relies on the fact that while multiplying two large primes is easy, factoring their product back into primes is virtually impossible for standard computers.
+              RSA works because multiplying two prime numbers is instant (e.g. 5 × 11 = 55), but finding which two primes were multiplied to get a large number (like factoring 55 back to 5 and 11) is incredibly difficult when the numbers are hundreds of digits long. This mathematical asymmetry is the foundation of digital signatures.
             </p>
           </div>
 
